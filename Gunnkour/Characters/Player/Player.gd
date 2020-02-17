@@ -19,12 +19,10 @@ func apply_force(state):
 	if(Input.is_action_pressed("Left")):
 		directional_force += DIRECTION.LEFT
 		state_machine.travel("Run")
-		$Footstep.play()
 		
 	if(Input.is_action_pressed("Right")):
 		directional_force += DIRECTION.RIGHT
 		state_machine.travel("Run")
-		$Footstep.play()
 		
 	if(Input.is_action_pressed("Jump") && jump_time < TOP_JUMP_TIME && can_jump):
 		directional_force += DIRECTION.UP
@@ -40,14 +38,14 @@ func apply_force(state):
 func _on_WallCheck_body_entered(body):
 	var groups = body.get_groups()
 	
-	if(groups.has("Walls")):
+	if(groups.has("Solid")):
 		set_friction(0)
 			
 
 func _on_WallCheck_body_exited(body):
 	var groups = body.get_groups()
 	
-	if(groups.has("Walls")):
+	if(groups.has("Solid")):
 		set_friction(1)	
 		
 
