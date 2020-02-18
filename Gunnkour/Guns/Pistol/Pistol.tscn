@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Gunnkour/Guns/Pistol/1d3a5b35517ac5d56b4900396148eb00-removebg-preview.png" type="Texture" id=2]
-[ext_resource path="res://Gunnkour/Guns/Pistol/Position2D.gd" type="Script" id=3]
+[ext_resource path="res://Gunnkour/Guns/Pistol/Pistol.gd" type="Script" id=3]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Sprite

@@ -19,7 +19,7 @@ config/name="Gunnkour"
 config/description="Gunnkour, bro! LOL!"
 run/main_scene="res://Gunnkour/Game.tscn"
 boot_splash/bg_color=Color( 0.776471, 0.0784314, 0.0784314, 1 )
-config/icon="res://Gunnkour/icon.png"
+config/icon="res://Gunnkour/Characters/Player/Sprites/head.png"
 
 [autoload]
 
