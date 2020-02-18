@@ -15,26 +15,6 @@ rough = true
 
 [sub_resource type="CircleShape2D" id=3]
 
-[sub_resource type="AnimationNodeAnimation" id=4]
-animation = "Idle"
-
-[sub_resource type="AnimationNodeAnimation" id=5]
-animation = "Run"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=6]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=7]
-
-[sub_resource type="AnimationNodeStateMachine" id=8]
-states/Idle/node = SubResource( 4 )
-states/Idle/position = Vector2( 124, 56 )
-states/Run/node = SubResource( 5 )
-states/Run/position = Vector2( 421, 156 )
-transitions = [ "Idle", "Run", SubResource( 6 ), "Run", "Idle", SubResource( 7 ) ]
-start_node = "Idle"
-
-[sub_resource type="AnimationNodeStateMachinePlayback" id=9]
-
 [sub_resource type="Animation" id=10]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Head/LeftLeg:position")
@@ -300,6 +280,26 @@ tracks/10/keys = {
 "times": PoolRealArray( 0.2, 0.6 )
 }
 
+[sub_resource type="AnimationNodeAnimation" id=4]
+animation = "Idle"
+
+[sub_resource type="AnimationNodeAnimation" id=5]
+animation = "Run"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=6]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=7]
+
+[sub_resource type="AnimationNodeStateMachine" id=8]
+states/Idle/node = SubResource( 4 )
+states/Idle/position = Vector2( 124, 56 )
+states/Run/node = SubResource( 5 )
+states/Run/position = Vector2( 421, 156 )
+transitions = [ "Idle", "Run", SubResource( 6 ), "Run", "Idle", SubResource( 7 ) ]
+start_node = "Idle"
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=9]
+
 [sub_resource type="CircleShape2D" id=12]
 
 [sub_resource type="CapsuleShape2D" id=13]
@@ -307,8 +307,10 @@ tracks/10/keys = {
 [node name="Player" type="RigidBody2D"]
 mode = 2
 physics_material_override = SubResource( 1 )
-gravity_scale = 5.0
+gravity_scale = 7.0
 script = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="."]
 
 [node name="Footstep" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 0, 7.54237 )
@@ -333,9 +335,14 @@ scale = Vector2( 0.426559, 0.425561 )
 shape = SubResource( 3 )
 
 [node name="Camera" type="Camera2D" parent="."]
-position = Vector2( 0, 1.794 )
 current = true
-zoom = Vector2( 0.08, 0.08 )
+zoom = Vector2( 0.09, 0.09 )
+smoothing_speed = 20.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+playback_default_blend_time = 0.1
+anims/Idle = SubResource( 10 )
+anims/Run = SubResource( 11 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 8 )
@@ -343,10 +350,23 @@ anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 9 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-playback_default_blend_time = 0.1
-anims/Idle = SubResource( 10 )
-anims/Run = SubResource( 11 )
+[node name="GroundCheck" type="Area2D" parent="."]
+position = Vector2( 0.153352, 3.5953 )
+scale = Vector2( 0.413256, 0.367691 )
+
+[node name="Ground_Collision" type="CollisionShape2D" parent="GroundCheck"]
+position = Vector2( 0, 13.0486 )
+scale = Vector2( 0.344126, 0.344126 )
+shape = SubResource( 12 )
+
+[node name="WallCheck" type="Area2D" parent="."]
+position = Vector2( -0.0811062, -1.2977 )
+scale = Vector2( 1.0474, 0.483046 )
+
+[node name="Wall_Collision" type="CollisionShape2D" parent="WallCheck"]
+position = Vector2( 0.0248947, 2.14091 )
+scale = Vector2( 0.603452, 0.387404 )
+shape = SubResource( 13 )
 
 [node name="Head" type="Sprite" parent="."]
 scale = Vector2( 0.458223, 0.458223 )
@@ -367,24 +387,6 @@ texture = ExtResource( 5 )
 [node name="RightKnee" type="Sprite" parent="Head/RightLeg"]
 position = Vector2( 0, 6.03064 )
 texture = ExtResource( 3 )
-
-[node name="GroundCheck" type="Area2D" parent="."]
-position = Vector2( 0.153352, 3.5953 )
-scale = Vector2( 0.413256, 0.367691 )
-
-[node name="Ground_Collision" type="CollisionShape2D" parent="GroundCheck"]
-position = Vector2( 0, 13.0486 )
-scale = Vector2( 0.344126, 0.344126 )
-shape = SubResource( 12 )
-
-[node name="WallCheck" type="Area2D" parent="."]
-position = Vector2( -0.0811062, -1.2977 )
-scale = Vector2( 1.0474, 0.483046 )
-
-[node name="Wall_Collision" type="CollisionShape2D" parent="WallCheck"]
-position = Vector2( 0.0248947, 2.14091 )
-scale = Vector2( 0.603452, 0.387404 )
-shape = SubResource( 13 )
 [connection signal="body_entered" from="GroundCheck" to="." method="_on_GroundCheck_body_entered"]
 [connection signal="body_exited" from="GroundCheck" to="." method="_on_GroundCheck_body_exited"]
 [connection signal="area_entered" from="WallCheck" to="." method="_on_WallCheck_area_entered"]

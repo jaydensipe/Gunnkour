@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Gunnkour/Guns/Crosshairs/Crosshairs.gd" type="Script" id=1]
+[ext_resource path="res://Gunnkour/Guns/Crosshairs/crosshairs.png" type="Texture" id=2]
+
+[node name="Sprite" type="Sprite"]
+scale = Vector2( 0.564788, 0.564788 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 8, 26, 4, 4 )
+script = ExtResource( 1 )
