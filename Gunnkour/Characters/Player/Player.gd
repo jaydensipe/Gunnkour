@@ -35,6 +35,9 @@ func apply_force(state):
 	elif(Input.is_action_just_released("Jump")):
 		can_jump = false
 		top_speed = 100
+	
+	if(Input.is_action_just_pressed("Jump")):
+		$jump.play()
 		
 	if(grounded):
 		can_jump = true
@@ -43,6 +46,9 @@ func apply_force(state):
 	if(!grounded):
 		$Footstep.stop()
 		state_machine.travel("Idle")
+		
+		
+
 
 	if(Input.is_action_just_pressed("Mouse")):
 		mouseLocation = get_local_mouse_position()

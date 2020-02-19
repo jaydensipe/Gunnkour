@@ -5,6 +5,8 @@
 
 
 
+
+
 [node name="RichTextLabel" type="RichTextLabel"]
 margin_right = 40.0
 margin_bottom = 40.0
