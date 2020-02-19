@@ -3,7 +3,6 @@ extends RigidBody2D
 var acceleration = 10000
 var top_speed = 200
 var top_jump_speed = 600
-
 var directional_force = Vector2()
 
 const DIRECTION = {

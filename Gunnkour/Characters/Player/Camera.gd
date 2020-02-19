@@ -1,8 +1,16 @@
 extends Camera2D
 
 var cameraMove = Vector2()
+export var shake = 0
+export var shake_magnitude = 1
+	
+func _ready():
+	$"/root/global".register_camera(self)
 	
 func _process(delta):
+	
+	offset = Vector2(rand_range(-shake, shake), rand_range(-shake, shake))
+	shake *= 0.9
 
 	if(Input.is_action_pressed("ArrowUp")):	
 		cameraMove = Vector2(0, -25)

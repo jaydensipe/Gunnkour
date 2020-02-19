@@ -25,6 +25,7 @@ config/icon="res://Gunnkour/Characters/Player/Sprites/head.png"
 
 UserData="*res://addons/github-integration/scripts/user_data.gd"
 IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"
+global="*res://Gunnkour/global.gd"
 
 [display]
 

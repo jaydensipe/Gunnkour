@@ -8,12 +8,13 @@ const TOP_JUMP_TIME = 0.1
 
 var mouseLocation = Vector2()
 
-
 func _ready():
+	$"/root/global".register_player(self)
 	state_machine = $AnimationTree.get("parameters/playback")
 	acceleration = 700
 	top_speed = 130
 	top_jump_speed = 120
+
 
 func apply_force(state):
 	var current = state_machine.get_current_node()
@@ -22,11 +23,11 @@ func apply_force(state):
 	if(Input.is_action_pressed("Left")):
 		directional_force += DIRECTION.LEFT
 		state_machine.travel("Run")
-		get_node("Head").set_flip_h(true)
+		$Head.set_flip_h(true)
 	if(Input.is_action_pressed("Right")):
 		directional_force += DIRECTION.RIGHT
 		state_machine.travel("Run")
-		get_node("Head").set_flip_h(false)
+		$Head.set_flip_h(false)
 		
 	if(Input.is_action_pressed("Jump") && jump_time < TOP_JUMP_TIME && can_jump):
 		directional_force += DIRECTION.UP
@@ -46,13 +47,6 @@ func apply_force(state):
 	if(!grounded):
 		$Footstep.stop()
 		state_machine.travel("Idle")
-		
-		
-
-
-	if(Input.is_action_just_pressed("Mouse")):
-		mouseLocation = get_local_mouse_position()
-		apply_central_impulse((mouseLocation)*-10)
 
 
 #collision checks

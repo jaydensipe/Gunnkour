@@ -5,7 +5,7 @@
 [ext_resource path="res://Gunnkour/Guns/Pistol/Position2D.gd" type="Script" id=3]
 [ext_resource path="res://Gunnkour/Guns/Pistol/Pistol.gd" type="Script" id=6]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
 resource_name = "Shoot"
 length = 0.2
 tracks/0/type = "value"
@@ -50,4 +50,4 @@ texture = ExtResource( 2 )
 stream = ExtResource( 1 )
 
 [node name="pistolshot" type="AnimationPlayer" parent="."]
-anims/Shoot = SubResource( 2 )
+anims/Shoot = SubResource( 1 )

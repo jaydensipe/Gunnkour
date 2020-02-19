@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Gunnkour/Characters/Player/Sprites/llegtop.png" type="Texture" id=1]
 [ext_resource path="res://Gunnkour/Characters/Player/Sprites/head.png" type="Texture" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://Gunnkour/Characters/Player/Sprites/rlegtop.png" type="Texture" id=5]
 [ext_resource path="res://Gunnkour/Characters/Player/Player.gd" type="Script" id=6]
 [ext_resource path="res://Gunnkour/Characters/Sounds/footstep.wav" type="AudioStream" id=7]
-[ext_resource path="res://Gunnkour/Characters/Player/Camera.gd" type="Script" id=8]
 [ext_resource path="res://Gunnkour/Characters/Sounds/jump.wav" type="AudioStream" id=9]
 
 [sub_resource type="PhysicsMaterial" id=1]
@@ -302,7 +301,7 @@ tracks/10/keys = {
 
 [sub_resource type="CircleShape2D" id=11]
 
-[sub_resource type="CircleShape2D" id=12]
+[sub_resource type="RayShape2D" id=14]
 
 [sub_resource type="CapsuleShape2D" id=13]
 
@@ -338,37 +337,37 @@ stream = ExtResource( 9 )
 pitch_scale = 0.5
 
 [node name="CollisionWall" type="CollisionShape2D" parent="."]
-position = Vector2( 2.81048, 0.103797 )
+position = Vector2( 1.93859, 0.103797 )
 rotation = 1.5708
 scale = Vector2( 0.479141, 0.416201 )
 shape = SubResource( 10 )
 
 [node name="CollisionWall2" type="CollisionShape2D" parent="."]
-position = Vector2( -2.64511, -0.104 )
+position = Vector2( -2.05709, -0.104 )
 rotation = -1.5708
+scale = Vector2( 0.479141, 0.416201 )
+shape = SubResource( 10 )
+
+[node name="CollisionWall3" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 3.38452 )
+rotation = 3.14159
 scale = Vector2( 0.479141, 0.416201 )
 shape = SubResource( 10 )
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2( -5.63854e-09, 0.140208 )
 rotation = -0.0753612
-scale = Vector2( 0.441658, 0.440624 )
+scale = Vector2( 0.550869, 0.54958 )
 shape = SubResource( 11 )
-
-[node name="Camera" type="Camera2D" parent="."]
-current = true
-zoom = Vector2( 0.1, 0.1 )
-smoothing_speed = 10.0
-script = ExtResource( 8 )
 
 [node name="GroundCheck" type="Area2D" parent="."]
 position = Vector2( 0.153352, 3.5953 )
 scale = Vector2( 0.413256, 0.367691 )
 
 [node name="Ground_Collision" type="CollisionShape2D" parent="GroundCheck"]
-position = Vector2( 0, 13.0486 )
-scale = Vector2( 0.344126, 0.344126 )
-shape = SubResource( 12 )
+position = Vector2( 0, 3.49523 )
+scale = Vector2( 0.455418, 0.455418 )
+shape = SubResource( 14 )
 
 [node name="WallCheck" type="Area2D" parent="."]
 position = Vector2( -0.0811062, -1.2977 )
