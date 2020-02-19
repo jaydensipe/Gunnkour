@@ -18,7 +18,7 @@
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 0.38, 0, 0, 0.38, 4, 4 )
+"shape_transform": Transform2D( 0.42, 0, 0, 0.42, 4, 4 )
 } ]
 0/z_index = 0
 1/name = "1"
@@ -34,7 +34,7 @@
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 0.38, 0, 0, 0.38, 4, 4 )
+"shape_transform": Transform2D( 0.42, 0, 0, 0.42, 4, 4 )
 } ]
 1/z_index = 0
 2/name = "2"
@@ -50,7 +50,7 @@
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 0.38, 0, 0, 0.38, 4, 4 )
+"shape_transform": Transform2D( 0.42, 0, 0, 0.42, 4, 4 )
 } ]
 2/z_index = 0
 3/name = "3"
@@ -66,7 +66,7 @@
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 0.38, 0, 0, 0.38, 4, 4 )
+"shape_transform": Transform2D( 0.42, 0, 0, 0.42, 4, 4 )
 } ]
 3/z_index = 0
 4/name = "4"
@@ -82,7 +82,7 @@
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 0.38, 0, 0, 0.38, 4, 4 )
+"shape_transform": Transform2D( 0.42, 0, 0, 0.42, 4, 4 )
 } ]
 4/z_index = 0
 5/name = "5"
@@ -98,7 +98,7 @@
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 0.38, 0, 0, 0.38, 4, 4 )
+"shape_transform": Transform2D( 0.42, 0, 0, 0.42, 4, 4 )
 } ]
 5/z_index = 0
 6/name = "6"
@@ -114,7 +114,7 @@
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 0.38, 0, 0, 0.38, 4, 4 )
+"shape_transform": Transform2D( 0.42, 0, 0, 0.42, 4, 4 )
 } ]
 6/z_index = 0
 7/name = "7"
@@ -130,7 +130,7 @@
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 0.38, 0, 0, 0.38, 4, 4 )
+"shape_transform": Transform2D( 0.42, 0, 0, 0.42, 4, 4 )
 } ]
 7/z_index = 0
 8/name = "8"
@@ -146,7 +146,7 @@
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 0.38, 0, 0, 0.38, 4, 4 )
+"shape_transform": Transform2D( 0.42, 0, 0, 0.42, 4, 4 )
 } ]
 8/z_index = 0
 9/name = "9"
@@ -162,7 +162,7 @@
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 0.38, 0, 0, 0.38, 4, 4 )
+"shape_transform": Transform2D( 0.42, 0, 0, 0.42, 4, 4 )
 } ]
 9/z_index = 0
 10/name = "10"
@@ -178,7 +178,7 @@
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 0.38, 0, 0, 0.38, 4, 4 )
+"shape_transform": Transform2D( 0.42, 0, 0, 0.42, 4, 4 )
 } ]
 10/z_index = 0
 11/name = "11"
@@ -194,7 +194,7 @@
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 0.38, 0, 0, 0.38, 4, 4 )
+"shape_transform": Transform2D( 0.42, 0, 0, 0.42, 4, 4 )
 } ]
 11/z_index = 0
 12/name = "12"
@@ -210,7 +210,7 @@
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 0.38, 0, 0, 0.38, 4, 4 )
+"shape_transform": Transform2D( 0.42, 0, 0, 0.42, 4, 4 )
 } ]
 12/z_index = 0
 13/name = "13"
@@ -226,7 +226,7 @@
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 0.38, 0, 0, 0.38, 4, 4 )
+"shape_transform": Transform2D( 0.42, 0, 0, 0.42, 4, 4 )
 } ]
 13/z_index = 0
 14/name = "14"
@@ -242,7 +242,7 @@
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 0.38, 0, 0, 0.38, 4, 4 )
+"shape_transform": Transform2D( 0.42, 0, 0, 0.42, 4, 4 )
 } ]
 14/z_index = 0
 15/name = "15"
@@ -258,7 +258,7 @@
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 0.38, 0, 0, 0.38, 4, 4 )
+"shape_transform": Transform2D( 0.42, 0, 0, 0.42, 4, 4 )
 } ]
 15/z_index = 0
 16/name = "16"
@@ -274,7 +274,7 @@
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 0.38, 0, 0, 0.38, 4, 4 )
+"shape_transform": Transform2D( 0.42, 0, 0, 0.42, 4, 4 )
 } ]
 16/z_index = 0
 17/name = "17"
@@ -290,7 +290,7 @@
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 0.38, 0, 0, 0.38, 4, 4 )
+"shape_transform": Transform2D( 0.42, 0, 0, 0.42, 4, 4 )
 } ]
 17/z_index = 0
 18/name = "18"
@@ -306,7 +306,7 @@
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 0.38, 0, 0, 0.38, 4, 4 )
+"shape_transform": Transform2D( 0.42, 0, 0, 0.42, 4, 4 )
 } ]
 18/z_index = 0
 19/name = "19"
@@ -322,7 +322,7 @@
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 0.38, 0, 0, 0.38, 4, 4 )
+"shape_transform": Transform2D( 0.42, 0, 0, 0.42, 4, 4 )
 } ]
 19/z_index = 0
 20/name = "20"
@@ -338,7 +338,7 @@
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 0.38, 0, 0, 0.38, 4, 4 )
+"shape_transform": Transform2D( 0.42, 0, 0, 0.42, 4, 4 )
 } ]
 20/z_index = 0
 21/name = "21"
@@ -354,7 +354,7 @@
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 0.38, 0, 0, 0.38, 4, 4 )
+"shape_transform": Transform2D( 0.42, 0, 0, 0.42, 4, 4 )
 } ]
 21/z_index = 0
 22/name = "41"
@@ -370,7 +370,7 @@
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 0.38, 0, 0, 0.38, 4, 4 )
+"shape_transform": Transform2D( 0.42, 0, 0, 0.42, 4, 4 )
 } ]
 22/z_index = 0
 23/name = "42"
@@ -386,7 +386,7 @@
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 0.38, 0, 0, 0.38, 4, 4 )
+"shape_transform": Transform2D( 0.42, 0, 0, 0.42, 4, 4 )
 } ]
 23/z_index = 0
 24/name = "43"
@@ -402,7 +402,7 @@
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 0.38, 0, 0, 0.38, 4, 4 )
+"shape_transform": Transform2D( 0.42, 0, 0, 0.42, 4, 4 )
 } ]
 24/z_index = 0
 25/name = "44"
@@ -418,7 +418,7 @@
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 0.38, 0, 0, 0.38, 4, 4 )
+"shape_transform": Transform2D( 0.42, 0, 0, 0.42, 4, 4 )
 } ]
 25/z_index = 0
 26/name = "45"
@@ -434,7 +434,7 @@
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 0.38, 0, 0, 0.38, 4, 4 )
+"shape_transform": Transform2D( 0.42, 0, 0, 0.42, 4, 4 )
 } ]
 26/z_index = 0
 27/name = "46"
@@ -450,7 +450,7 @@
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 0.38, 0, 0, 0.38, 4, 4 )
+"shape_transform": Transform2D( 0.42, 0, 0, 0.42, 4, 4 )
 } ]
 27/z_index = 0
 28/name = "47"
@@ -466,7 +466,7 @@
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 0.38, 0, 0, 0.38, 4, 4 )
+"shape_transform": Transform2D( 0.42, 0, 0, 0.42, 4, 4 )
 } ]
 28/z_index = 0
 29/name = "48"
@@ -482,7 +482,7 @@
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 0.38, 0, 0, 0.38, 4, 4 )
+"shape_transform": Transform2D( 0.42, 0, 0, 0.42, 4, 4 )
 } ]
 29/z_index = 0
 30/name = "22"
