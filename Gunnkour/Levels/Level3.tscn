@@ -34,7 +34,7 @@ __meta__ = {
 [node name="Solids" type="TileMap" parent="Tileset" groups=[
 "Solid",
 ]]
-position = Vector2( 541.398, 350.393 )
+position = Vector2( 538.942, 259.54 )
 z_index = 5
 tile_set = ExtResource( 7 )
 cell_size = Vector2( 8, 8 )
@@ -44,7 +44,7 @@ tile_data = PoolIntArray( -3080102, 4, 0, -3080101, 4, 0, -3080100, 4, 0, -30800
 [node name="Non-Solids" type="TileMap" parent="Tileset" groups=[
 "Solid",
 ]]
-position = Vector2( 541.398, 350.393 )
+position = Vector2( 538.942, 259.54 )
 tile_set = ExtResource( 7 )
 cell_size = Vector2( 8, 8 )
 format = 1
@@ -58,7 +58,7 @@ position = Vector2( -210.073, -142.677 )
 [node name="Player" parent="Player" groups=[
 "Player",
 ] instance=ExtResource( 6 )]
-position = Vector2( 481.24, 337.043 )
+position = Vector2( 477.827, 246.604 )
 
 [node name="Pistol" parent="Player/Player" instance=ExtResource( 2 )]
 position = Vector2( 4.80219, 3.46326 )
@@ -82,5 +82,5 @@ position = Vector2( 1029.75, 641.066 )
 scale = Vector2( 134.636, -9.65369 )
 
 [node name="EndBullet" parent="." instance=ExtResource( 8 )]
-position = Vector2( 1689.08, 272.584 )
+position = Vector2( 1315.45, 70.4242 )
 scale = Vector2( 0.0706425, 0.0706425 )

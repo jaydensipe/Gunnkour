@@ -58,16 +58,17 @@ tile_data = PoolIntArray( -1245191, -1073741820, 0, -1245190, -1073741820, 0, -1
 "Player",
 ] instance=ExtResource( 3 )]
 position = Vector2( 481.24, 337.043 )
+gravity_scale = 18.0
 
 [node name="Pistol" parent="Player/Player" instance=ExtResource( 7 )]
 position = Vector2( 4.80219, 3.46326 )
 scale = Vector2( 0.466491, 0.466491 )
 
 [node name="Timer" parent="Player/Player" instance=ExtResource( 2 )]
-margin_left = 38.9535
-margin_top = -22.5952
-margin_right = 78.9535
-margin_bottom = 17.4048
+margin_left = 39.0
+margin_top = -23.0
+margin_right = 126.0
+margin_bottom = 17.0
 tab_size = 2
 
 [node name="Camera" parent="Player/Player" instance=ExtResource( 1 )]

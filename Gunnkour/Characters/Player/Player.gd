@@ -4,7 +4,7 @@ var state_machine
 var grounded = false
 var can_jump = false
 var jump_time = 0
-const TOP_JUMP_TIME = 0.1
+const TOP_JUMP_TIME = 0.2
 
 var mouseLocation = Vector2()
 
