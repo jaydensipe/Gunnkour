@@ -20,6 +20,18 @@ func apply_force(state):
 	var current = state_machine.get_current_node()
 	state_machine.travel("Idle")
 	
+			
+	if (Input.is_action_pressed("Control")):
+		top_speed = 50
+	elif(Input.is_action_just_released("Control")):
+		top_speed = 130
+	
+	
+	if (Input.is_action_pressed("Shift")):
+		top_speed = 160
+	elif(Input.is_action_just_released("Shift")):
+		top_speed = 130
+		
 	if(Input.is_action_pressed("Left")):
 		directional_force += DIRECTION.LEFT
 		state_machine.travel("Run")
@@ -42,7 +54,6 @@ func apply_force(state):
 		
 	if(grounded):
 		can_jump = true
-		top_speed = 130
 		jump_time = 0
 	if(!grounded):
 		$Footstep.stop()
@@ -77,7 +88,5 @@ func _on_GroundCheck_body_exited(body):
 	
 	if(groups.has("Solid")):
 		grounded = false
-
-
 
 

@@ -1,5 +1,9 @@
 extends Node
 
+var levelCounter = 1
+
+
+# register 
 var player
 var camera
 

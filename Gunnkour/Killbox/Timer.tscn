@@ -1,15 +1,15 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Gunnkour/Killbox/Timer.gd" type="Script" id=1]
+[ext_resource path="res://Gunnkour/Killbox/ThaleahFat.ttf" type="DynamicFontData" id=2]
 
-
-
-
-
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
 
 [node name="RichTextLabel" type="RichTextLabel"]
 margin_right = 40.0
 margin_bottom = 40.0
+custom_fonts/normal_font = SubResource( 1 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false

@@ -3,9 +3,6 @@
 [ext_resource path="res://Gunnkour/Killbox/Killbox.gd" type="Script" id=1]
 [ext_resource path="res://Gunnkour/Characters/Sounds/death.wav" type="AudioStream" id=2]
 
-
-
-
 [sub_resource type="RectangleShape2D" id=1]
 
 [sub_resource type="GDScript" id=2]

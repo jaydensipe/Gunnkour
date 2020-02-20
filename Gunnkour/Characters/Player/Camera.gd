@@ -1,8 +1,8 @@
 extends Camera2D
 
 var cameraMove = Vector2()
-export var shake = 0
-export var shake_magnitude = 1
+var shake = 0
+var shake_magnitude = 1
 	
 func _ready():
 	$"/root/global".register_camera(self)

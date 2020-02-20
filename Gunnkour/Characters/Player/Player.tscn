@@ -301,7 +301,7 @@ tracks/10/keys = {
 
 [sub_resource type="CircleShape2D" id=11]
 
-[sub_resource type="RayShape2D" id=14]
+[sub_resource type="RayShape2D" id=12]
 
 [sub_resource type="CapsuleShape2D" id=13]
 
@@ -367,7 +367,7 @@ scale = Vector2( 0.413256, 0.367691 )
 [node name="Ground_Collision" type="CollisionShape2D" parent="GroundCheck"]
 position = Vector2( 0, 3.49523 )
 scale = Vector2( 0.455418, 0.455418 )
-shape = SubResource( 14 )
+shape = SubResource( 12 )
 
 [node name="WallCheck" type="Area2D" parent="."]
 position = Vector2( -0.0811062, -1.2977 )
