@@ -1,10 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Gunnkour/Killbox/KillBox.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Gunnkour/Guns/Pistol/Pistol.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Gunnkour/Characters/Player/Camera.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Gunnkour/Guns/Crosshairs/Crosshairs.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Gunnkour/Killbox/Timer.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Gunnkour/Characters/Player/Player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Gunnkour/Tilemap/Tiles.tres" type="TileSet" id=7]
 [ext_resource path="res://Gunnkour/EndBullet/EndBullet.tscn" type="PackedScene" id=8]
@@ -62,13 +61,6 @@ position = Vector2( 481.24, 337.043 )
 [node name="Pistol" parent="Player/Player" instance=ExtResource( 2 )]
 position = Vector2( 4.80219, 3.46326 )
 scale = Vector2( 0.466491, 0.466491 )
-
-[node name="Timer" parent="Player/Player" instance=ExtResource( 5 )]
-margin_left = 43.3978
-margin_top = -23.7063
-margin_right = 83.3978
-margin_bottom = 16.2937
-tab_size = 2
 
 [node name="Camera" parent="Player/Player" instance=ExtResource( 3 )]
 

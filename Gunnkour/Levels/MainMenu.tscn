@@ -1,0 +1,91 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Gunnkour/Levels/MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://Gunnkour/Killbox/ThaleahFat.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Gunnkour/Characters/Sounds/mainmenumusic.wav" type="AudioStream" id=3]
+
+[sub_resource type="Gradient" id=1]
+colors = PoolColorArray( 0, 0, 0, 1, 0.156863, 0.717647, 0.729412, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = SubResource( 2 )
+region_rect = Rect2( 0, 0, 2048, 1 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 84.0549
+margin_top = 12.3032
+margin_right = 148.055
+margin_bottom = 45.3032
+rect_scale = Vector2( 27.4769, 27.4769 )
+custom_fonts/font = SubResource( 4 )
+text = "Gunnkour
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="Button" parent="."]
+margin_left = 121.923
+margin_top = 452.618
+margin_right = 168.923
+margin_bottom = 473.618
+rect_scale = Vector2( 6.06068, 6.06068 )
+custom_fonts/font = SubResource( 5 )
+text = "PLAY!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Settings" type="Button" parent="."]
+margin_left = 121.923
+margin_top = 614.698
+margin_right = 168.923
+margin_bottom = 635.698
+rect_scale = Vector2( 6.06068, 6.06068 )
+custom_fonts/font = SubResource( 5 )
+text = "SETTINGS!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="Button" parent="."]
+margin_left = 121.923
+margin_top = 776.778
+margin_right = 168.923
+margin_bottom = 797.778
+rect_scale = Vector2( 6.06068, 6.06068 )
+custom_fonts/font = SubResource( 5 )
+text = "EXIT!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+[connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]

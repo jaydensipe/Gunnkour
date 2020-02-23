@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Gunnkour/Pause Menu High Score/Control.gd" type="Script" id=1]
+[ext_resource path="res://Gunnkour/Killbox/ThaleahFat.ttf" type="DynamicFontData" id=2]
+
+
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[node name="Pause" type="Control"]
+pause_mode = 2
+margin_right = 665.0
+margin_bottom = 371.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -111.365
+margin_top = 41.1487
+margin_right = -63.3655
+margin_bottom = 56.1487
+rect_scale = Vector2( 4.63685, 4.63685 )
+rect_pivot_offset = Vector2( 1.06451, -0.315874 )
+custom_fonts/font = SubResource( 1 )
+text = "PAUSED"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 95.827
+margin_top = 164.503
+margin_right = 324.827
+margin_bottom = 179.503
+rect_scale = Vector2( 1.98092, 1.98092 )
+custom_fonts/font = SubResource( 2 )
+text = "Press \"f\" to return to main menu."
+__meta__ = {
+"_edit_use_anchors_": false
+}
