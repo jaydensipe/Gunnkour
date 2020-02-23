@@ -1,7 +1,6 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Gunnkour/Killbox/KillBox.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Gunnkour/Guns/Pistol/Pistol.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Gunnkour/Characters/Player/Camera.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Gunnkour/Guns/Crosshairs/Crosshairs.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Gunnkour/Characters/Player/Player.tscn" type="PackedScene" id=6]
@@ -57,10 +56,6 @@ tile_data = PoolIntArray( -458716, 48, 0, -393180, 49, 0, -327644, 50, 0, 196589
 "Player",
 ] instance=ExtResource( 6 )]
 position = Vector2( 481.24, 337.043 )
-
-[node name="Pistol" parent="Player/Player" instance=ExtResource( 2 )]
-position = Vector2( 4.80219, 3.46326 )
-scale = Vector2( 0.466491, 0.466491 )
 
 [node name="Camera" parent="Player/Player" instance=ExtResource( 3 )]
 

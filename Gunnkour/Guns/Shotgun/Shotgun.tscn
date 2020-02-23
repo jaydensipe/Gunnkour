@@ -1,16 +1,16 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Gunnkour/Guns/Pistol/gunshot.wav" type="AudioStream" id=1]
-[ext_resource path="res://Gunnkour/Guns/Pistol/gun.png" type="Texture" id=2]
-[ext_resource path="res://Gunnkour/Guns/Pistol/Position2D.gd" type="Script" id=3]
+[ext_resource path="res://Gunnkour/Guns/Shotgun/shotgun.png" type="Texture" id=2]
+[ext_resource path="res://Gunnkour/Guns/Shotgun/Shotgun.gd" type="Script" id=3]
 [ext_resource path="res://Gunnkour/Characters/Sounds/reload.wav" type="AudioStream" id=4]
-[ext_resource path="res://Gunnkour/Guns/Pistol/Pistol.gd" type="Script" id=6]
+[ext_resource path="res://Gunnkour/Guns/Shotgun/Position2D.gd" type="Script" id=5]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=4]
 resource_name = "Reload"
 length = 0.3
 tracks/0/type = "value"
-tracks/0/path = NodePath("Position2D/Pistol:position")
+tracks/0/path = NodePath("Position2D/Sprite:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -19,10 +19,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -0.200073, -0.0300293 ), Vector2( 0.206421, -0.301086 ), Vector2( 0.0708618, 0.240997 ), Vector2( -0.0645752, 0.240997 ) ]
+"values": [ Vector2( -5.25812, 4.42789 ), Vector2( -5.25812, 4.42789 ), Vector2( -5.25812, 4.42789 ), Vector2( -5.25812, 4.42789 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Position2D/Pistol:rotation_degrees")
+tracks/1/path = NodePath("Position2D/Sprite:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -31,14 +31,14 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.224973, 89.1941, 181.065, 0.224973 ]
+"values": [ 0.0, 90.2861, 115.98, 0.0 ]
 }
 
 [sub_resource type="Animation" id=1]
 resource_name = "Shoot"
 length = 0.2
 tracks/0/type = "value"
-tracks/0/path = NodePath("Position2D/Pistol:position")
+tracks/0/path = NodePath("Position2D/Sprite:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -47,10 +47,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -0.335571, -0.165527 ), Vector2( -0.200115, 0.105469 ), Vector2( 0.0709229, -0.0300293 ) ]
+"values": [ Vector2( -5.25812, 4.42789 ), Vector2( -5.25812, 4.42789 ), Vector2( -5.25812, 4.42789 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Position2D/Pistol:rotation_degrees")
+tracks/1/path = NodePath("Position2D/Sprite:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -59,25 +59,14 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.224973, -61.7454, 0.224973 ]
+"values": [ 0.0, -30.642, 0.0 ]
 }
 
 [sub_resource type="Gradient" id=3]
 colors = PoolColorArray( 0.992767, 1, 0.0742188, 1, 0.910156, 0.802497, 0.0995483, 1 )
 
-[node name="Pistol" type="Node2D"]
-script = ExtResource( 6 )
-
-[node name="Position2D" type="Position2D" parent="."]
-position = Vector2( -4.89068, -2.13052 )
-scale = Vector2( 0.0851112, 0.0851112 )
+[node name="Shotgun" type="Node2D"]
 script = ExtResource( 3 )
-
-[node name="Pistol" type="Sprite" parent="Position2D"]
-position = Vector2( -0.200073, -0.0300293 )
-rotation = 0.00392652
-texture = ExtResource( 2 )
-offset = Vector2( 43.6806, 24.5595 )
 
 [node name="Reload" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
@@ -86,9 +75,10 @@ pitch_scale = 0.6
 
 [node name="Gunshot" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
+volume_db = -0.5
 
-[node name="pistolshot" type="AnimationPlayer" parent="."]
-anims/Reload = SubResource( 2 )
+[node name="shotgunshot" type="AnimationPlayer" parent="."]
+anims/Reload = SubResource( 4 )
 anims/Shoot = SubResource( 1 )
 
 [node name="bulletParticle" type="CPUParticles2D" parent="."]
@@ -103,5 +93,15 @@ emission_sphere_radius = 1.0
 initial_velocity = 21.7
 scale_amount = 1.5
 color_ramp = SubResource( 3 )
-[connection signal="animation_finished" from="pistolshot" to="." method="_on_pistolshot_animation_finished"]
-[connection signal="animation_started" from="pistolshot" to="." method="_on_pistolshot_animation_started"]
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( -10.9975, 2.95353 )
+scale = Vector2( 0.128812, 0.128812 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="Position2D"]
+position = Vector2( -5.25812, 4.42789 )
+texture = ExtResource( 2 )
+offset = Vector2( 90.6343, -27.3568 )
+[connection signal="animation_finished" from="shotgunshot" to="." method="_on_pistolshot_animation_finished"]
+[connection signal="animation_started" from="shotgunshot" to="." method="_on_pistolshot_animation_started"]

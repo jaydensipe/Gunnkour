@@ -11,8 +11,8 @@ var mouseLocation = Vector2()
 func _ready():
 	$"/root/global".register_player(self)
 	state_machine = $AnimationTree.get("parameters/playback")
-	acceleration = 700
-	top_speed = 130
+	acceleration = 600
+	top_speed = 120
 	top_jump_speed = 120
 
 
@@ -23,14 +23,14 @@ func apply_force(state):
 			
 	if (Input.is_action_pressed("Control")):
 		top_speed = 50
-	elif(Input.is_action_just_released("Control")):
-		top_speed = 130
+	elif(Input.is_action_just_released("Control")): 
+		top_speed = 120
 	
 	
 	if (Input.is_action_pressed("Shift")):
 		top_speed = 160
 	elif(Input.is_action_just_released("Shift")):
-		top_speed = 130
+		top_speed = 120
 		
 	if(Input.is_action_pressed("Left")):
 		directional_force += DIRECTION.LEFT
