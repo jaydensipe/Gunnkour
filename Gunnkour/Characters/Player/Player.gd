@@ -14,6 +14,50 @@ func _ready():
 	acceleration = 600
 	top_speed = 120
 	top_jump_speed = 120
+	$Pistol.visible = false
+	$Pistol.set_physics_process(false)
+	$Shotgun.visible = false
+	$Shotgun.set_physics_process(false)
+	$SMG.visible = false
+	$SMG.set_physics_process(false)
+
+func _process(delta):
+	if Input.is_action_just_pressed("FirstW"):
+		$"/root/global".equippedWeapon = 1
+	
+	if ($"/root/global".equippedWeapon == 1):
+		$Pistol.visible = true
+		$Pistol.set_physics_process(true)
+		$Shotgun.visible = false
+		$Shotgun.set_physics_process(false)
+		$SMG.visible = false
+		$SMG.set_physics_process(false)
+		
+		
+	if Input.is_action_just_pressed("SecondW"):
+		$"/root/global".equippedWeapon = 2
+		
+	if ($"/root/global".equippedWeapon == 2):
+		$Pistol.visible = false
+		$Pistol.set_physics_process(false)
+		$Shotgun.visible = true
+		$Shotgun.set_physics_process(true)
+		$SMG.visible = false
+		$SMG.set_physics_process(false)
+		
+	if Input.is_action_just_pressed("ThirdW"):
+		$"/root/global".equippedWeapon = 3
+		
+	if ($"/root/global".equippedWeapon == 3):
+		$Pistol.visible = false
+		$Pistol.set_physics_process(false)
+		$Shotgun.visible = false
+		$Shotgun.set_physics_process(false)
+		$SMG.visible = true
+		$SMG.set_physics_process(true)
+		
+	
+		
 
 
 func apply_force(state):

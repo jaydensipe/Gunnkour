@@ -1,0 +1,384 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Gunnkour/Levels/LevelSelectionScreen.gd" type="Script" id=1]
+[ext_resource path="res://Gunnkour/Killbox/ThaleahFat.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Gunnkour/Characters/Sounds/mainmenumusic.wav" type="AudioStream" id=3]
+
+[sub_resource type="Gradient" id=1]
+colors = PoolColorArray( 0, 0, 0, 1, 0.156863, 0.717647, 0.729412, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = SubResource( 2 )
+region_rect = Rect2( 0, 0, 2048, 1 )
+
+[sub_resource type="Shader" id=4]
+code = "shader_type canvas_item;
+
+void vertex()
+{
+	VERTEX.x += cos(TIME + VERTEX.x) * 0.5;
+	VERTEX.y += sin(TIME + VERTEX.y) * 0.5;
+	
+}"
+
+[sub_resource type="ShaderMaterial" id=5]
+shader = SubResource( 4 )
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+material = SubResource( 5 )
+margin_left = 232.049
+margin_top = 12.0
+margin_right = 324.049
+margin_bottom = 45.0
+rect_scale = Vector2( 16.1832, 15.7053 )
+custom_fonts/font = SubResource( 6 )
+text = "Level Select
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="Button" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -680.905
+margin_top = 300.0
+margin_right = -633.905
+margin_bottom = 347.0
+rect_scale = Vector2( 3.27459, 3.27459 )
+custom_fonts/font = SubResource( 7 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play2" type="Button" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -479.905
+margin_top = 300.0
+margin_right = -432.905
+margin_bottom = 347.0
+rect_scale = Vector2( 3.27459, 3.27459 )
+custom_fonts/font = SubResource( 7 )
+text = "2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play3" type="Button" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -278.905
+margin_top = 300.0
+margin_right = -231.905
+margin_bottom = 347.0
+rect_scale = Vector2( 3.27459, 3.27459 )
+custom_fonts/font = SubResource( 7 )
+text = "3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play4" type="Button" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -77.9053
+margin_top = 300.0
+margin_right = -28.9053
+margin_bottom = 347.0
+rect_scale = Vector2( 3.27459, 3.27459 )
+custom_fonts/font = SubResource( 7 )
+text = "4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play5" type="Button" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 123.095
+margin_top = 300.0
+margin_right = 170.095
+margin_bottom = 347.0
+rect_scale = Vector2( 3.27459, 3.27459 )
+custom_fonts/font = SubResource( 7 )
+text = "5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play6" type="Button" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 324.095
+margin_top = 300.0
+margin_right = 371.095
+margin_bottom = 347.0
+rect_scale = Vector2( 3.27459, 3.27459 )
+custom_fonts/font = SubResource( 7 )
+text = "6"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play7" type="Button" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 525.095
+margin_top = 300.0
+margin_right = 572.095
+margin_bottom = 347.0
+rect_scale = Vector2( 3.27459, 3.27459 )
+custom_fonts/font = SubResource( 7 )
+text = "7"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play14" type="Button" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -680.905
+margin_top = 544.0
+margin_right = -633.905
+margin_bottom = 591.0
+rect_scale = Vector2( 3.27459, 3.27459 )
+custom_fonts/font = SubResource( 7 )
+text = "8"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play13" type="Button" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -479.905
+margin_top = 544.0
+margin_right = -432.905
+margin_bottom = 591.0
+rect_scale = Vector2( 3.27459, 3.27459 )
+custom_fonts/font = SubResource( 7 )
+text = "9"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play12" type="Button" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -278.905
+margin_top = 544.0
+margin_right = -231.905
+margin_bottom = 591.0
+rect_scale = Vector2( 3.27459, 3.27459 )
+custom_fonts/font = SubResource( 7 )
+text = "10"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play11" type="Button" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -77.9053
+margin_top = 544.0
+margin_right = -28.9053
+margin_bottom = 591.0
+rect_scale = Vector2( 3.27459, 3.27459 )
+custom_fonts/font = SubResource( 7 )
+text = "11"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play10" type="Button" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 123.095
+margin_top = 544.0
+margin_right = 170.095
+margin_bottom = 591.0
+rect_scale = Vector2( 3.27459, 3.27459 )
+custom_fonts/font = SubResource( 7 )
+text = "12"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play9" type="Button" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 324.095
+margin_top = 544.0
+margin_right = 371.095
+margin_bottom = 591.0
+rect_scale = Vector2( 3.27459, 3.27459 )
+custom_fonts/font = SubResource( 7 )
+text = "13"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play8" type="Button" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 525.095
+margin_top = 544.0
+margin_right = 572.095
+margin_bottom = 591.0
+rect_scale = Vector2( 3.27459, 3.27459 )
+custom_fonts/font = SubResource( 7 )
+text = "14"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play21" type="Button" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -680.905
+margin_top = 788.0
+margin_right = -633.905
+margin_bottom = 835.0
+rect_scale = Vector2( 3.27459, 3.27459 )
+custom_fonts/font = SubResource( 7 )
+text = "15"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play20" type="Button" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -479.905
+margin_top = 788.0
+margin_right = -432.905
+margin_bottom = 835.0
+rect_scale = Vector2( 3.27459, 3.27459 )
+custom_fonts/font = SubResource( 7 )
+text = "16"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play19" type="Button" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -278.905
+margin_top = 788.0
+margin_right = -231.905
+margin_bottom = 835.0
+rect_scale = Vector2( 3.27459, 3.27459 )
+custom_fonts/font = SubResource( 7 )
+text = "17"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play18" type="Button" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -77.9053
+margin_top = 788.0
+margin_right = -28.9053
+margin_bottom = 835.0
+rect_scale = Vector2( 3.27459, 3.27459 )
+custom_fonts/font = SubResource( 7 )
+text = "18"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play17" type="Button" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 123.095
+margin_top = 788.0
+margin_right = 170.095
+margin_bottom = 835.0
+rect_scale = Vector2( 3.27459, 3.27459 )
+custom_fonts/font = SubResource( 7 )
+text = "19"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play16" type="Button" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 324.095
+margin_top = 788.0
+margin_right = 371.095
+margin_bottom = 835.0
+rect_scale = Vector2( 3.27459, 3.27459 )
+custom_fonts/font = SubResource( 7 )
+text = "20"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play15" type="Button" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 525.095
+margin_top = 788.0
+margin_right = 572.095
+margin_bottom = 835.0
+rect_scale = Vector2( 3.27459, 3.27459 )
+custom_fonts/font = SubResource( 7 )
+text = "21"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+[connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="Play2" to="." method="_on_Play2_pressed"]
+[connection signal="pressed" from="Play3" to="." method="_on_Play3_pressed"]
+[connection signal="pressed" from="Play4" to="." method="_on_Play4_pressed"]
+[connection signal="pressed" from="Play5" to="." method="_on_Play5_pressed"]
+[connection signal="pressed" from="Play6" to="." method="_on_Play6_pressed"]
+[connection signal="pressed" from="Play7" to="." method="_on_Play7_pressed"]
+[connection signal="pressed" from="Play14" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="Play13" to="." method="_on_Play2_pressed"]
+[connection signal="pressed" from="Play12" to="." method="_on_Play3_pressed"]
+[connection signal="pressed" from="Play11" to="." method="_on_Play4_pressed"]
+[connection signal="pressed" from="Play10" to="." method="_on_Play5_pressed"]
+[connection signal="pressed" from="Play9" to="." method="_on_Play6_pressed"]
+[connection signal="pressed" from="Play8" to="." method="_on_Play7_pressed"]
+[connection signal="pressed" from="Play21" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="Play20" to="." method="_on_Play2_pressed"]
+[connection signal="pressed" from="Play19" to="." method="_on_Play3_pressed"]
+[connection signal="pressed" from="Play18" to="." method="_on_Play4_pressed"]
+[connection signal="pressed" from="Play17" to="." method="_on_Play5_pressed"]
+[connection signal="pressed" from="Play16" to="." method="_on_Play6_pressed"]
+[connection signal="pressed" from="Play15" to="." method="_on_Play7_pressed"]

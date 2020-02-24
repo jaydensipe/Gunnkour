@@ -1,6 +1,7 @@
 extends Node
 
 var levelCounter = 1
+var equippedWeapon = 1
 
 
 # register 

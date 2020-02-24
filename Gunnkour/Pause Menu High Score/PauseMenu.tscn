@@ -3,8 +3,6 @@
 [ext_resource path="res://Gunnkour/Pause Menu High Score/Control.gd" type="Script" id=1]
 [ext_resource path="res://Gunnkour/Killbox/ThaleahFat.ttf" type="DynamicFontData" id=2]
 
-
-
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 2 )
 

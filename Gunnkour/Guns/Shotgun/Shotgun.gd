@@ -23,5 +23,3 @@ func _on_pistolshot_animation_finished(anim_name):
 func _on_pistolshot_animation_started(anim_name):
 	if anim_name == 'Reload':
 		$Reload.play()
-		$bulletParticle.emitting = true
-

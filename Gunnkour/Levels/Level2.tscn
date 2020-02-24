@@ -64,7 +64,7 @@ position = Vector2( 511.551, 338.648 )
 z_index = 6
 
 [node name="KillZone" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1029.75, 641.066 )
+position = Vector2( 1029.75, 580.416 )
 scale = Vector2( 134.636, -9.65369 )
 
 [node name="EndBullet" parent="." instance=ExtResource( 8 )]

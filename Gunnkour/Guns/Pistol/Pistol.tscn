@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Gunnkour/Guns/Pistol/gunshot.wav" type="AudioStream" id=1]
 [ext_resource path="res://Gunnkour/Guns/Pistol/gun.png" type="Texture" id=2]
@@ -6,7 +6,7 @@
 [ext_resource path="res://Gunnkour/Characters/Sounds/reload.wav" type="AudioStream" id=4]
 [ext_resource path="res://Gunnkour/Guns/Pistol/Pistol.gd" type="Script" id=6]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
 resource_name = "Reload"
 length = 0.3
 tracks/0/type = "value"
@@ -34,8 +34,7 @@ tracks/1/keys = {
 "values": [ 0.224973, 89.1941, 181.065, 0.224973 ]
 }
 
-[sub_resource type="Animation" id=1]
-resource_name = "Shoot"
+[sub_resource type="Animation" id=2]
 length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("Position2D/Pistol:position")
@@ -62,9 +61,6 @@ tracks/1/keys = {
 "values": [ 0.224973, -61.7454, 0.224973 ]
 }
 
-[sub_resource type="Gradient" id=3]
-colors = PoolColorArray( 0.992767, 1, 0.0742188, 1, 0.910156, 0.802497, 0.0995483, 1 )
-
 [node name="Pistol" type="Node2D"]
 script = ExtResource( 6 )
 
@@ -88,20 +84,7 @@ pitch_scale = 0.6
 stream = ExtResource( 1 )
 
 [node name="pistolshot" type="AnimationPlayer" parent="."]
-anims/Reload = SubResource( 2 )
-anims/Shoot = SubResource( 1 )
-
-[node name="bulletParticle" type="CPUParticles2D" parent="."]
-visible = false
-position = Vector2( -3.69547, -4.50766 )
-emitting = false
-amount = 6
-one_shot = true
-explosiveness = 0.58
-emission_shape = 1
-emission_sphere_radius = 1.0
-initial_velocity = 21.7
-scale_amount = 1.5
-color_ramp = SubResource( 3 )
+anims/Reload = SubResource( 1 )
+anims/Shoot = SubResource( 2 )
 [connection signal="animation_finished" from="pistolshot" to="." method="_on_pistolshot_animation_finished"]
 [connection signal="animation_started" from="pistolshot" to="." method="_on_pistolshot_animation_started"]

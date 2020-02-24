@@ -1,14 +1,13 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Gunnkour/Guns/Pistol/gunshot.wav" type="AudioStream" id=1]
-[ext_resource path="res://Gunnkour/Guns/Shotgun/shotgun.png" type="Texture" id=2]
-[ext_resource path="res://Gunnkour/Guns/Shotgun/Shotgun.gd" type="Script" id=3]
+[ext_resource path="res://Gunnkour/Guns/SMG/smg.png" type="Texture" id=2]
+[ext_resource path="res://Gunnkour/Guns/SMG/SMG.gd" type="Script" id=3]
 [ext_resource path="res://Gunnkour/Characters/Sounds/reload.wav" type="AudioStream" id=4]
 [ext_resource path="res://Gunnkour/Guns/Shotgun/Position2D.gd" type="Script" id=5]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Reload"
-length = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("Position2D/Sprite:position")
 tracks/0/interp = 1
@@ -16,7 +15,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.3, 0.4 ),
+"times": PoolRealArray( 0, 0.3, 0.7, 1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( -5.25812, 4.42789 ), Vector2( -5.25812, 4.42789 ), Vector2( -5.25812, 4.42789 ), Vector2( -5.25812, 4.42789 ) ]
@@ -28,7 +27,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.3, 0.4 ),
+"times": PoolRealArray( 0, 0.3, 0.7, 1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 90.2861, 115.98, 0.0 ]
@@ -61,7 +60,7 @@ tracks/1/keys = {
 "values": [ 0.0, -30.642, 0.0 ]
 }
 
-[node name="Shotgun" type="Node2D"]
+[node name="SMG" type="Node2D"]
 script = ExtResource( 3 )
 
 [node name="Reload" type="AudioStreamPlayer2D" parent="."]
@@ -73,18 +72,18 @@ pitch_scale = 0.6
 stream = ExtResource( 1 )
 volume_db = -0.5
 
-[node name="shotgunshot" type="AnimationPlayer" parent="."]
+[node name="smgshot" type="AnimationPlayer" parent="."]
 anims/Reload = SubResource( 1 )
 anims/Shoot = SubResource( 2 )
 
 [node name="Position2D" type="Position2D" parent="."]
-position = Vector2( -10.9975, 2.95353 )
+position = Vector2( -7.48422, -2.76643 )
 scale = Vector2( 0.128812, 0.128812 )
 script = ExtResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="Position2D"]
 position = Vector2( -5.25812, 4.42789 )
 texture = ExtResource( 2 )
-offset = Vector2( 90.6343, -27.3568 )
-[connection signal="animation_finished" from="shotgunshot" to="." method="_on_pistolshot_animation_finished"]
-[connection signal="animation_started" from="shotgunshot" to="." method="_on_pistolshot_animation_started"]
+offset = Vector2( 63.0559, 27.7097 )
+[connection signal="animation_finished" from="smgshot" to="." method="_on_smgshot_animation_finished"]
+[connection signal="animation_started" from="smgshot" to="." method="_on_smgshot_animation_started"]
