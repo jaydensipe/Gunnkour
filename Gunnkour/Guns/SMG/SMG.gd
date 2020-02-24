@@ -21,5 +21,6 @@ func _on_smgshot_animation_finished(anim_name):
 		bulletCounter = 0
 func _on_smgshot_animation_started(anim_name):
 	if anim_name == 'Reload':
-		$Reload.play()
+		if not $Reload.playing:
+			$Reload.play()
 

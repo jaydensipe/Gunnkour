@@ -19,8 +19,8 @@ gradient = SubResource( 1 )
 [node name="Tileset" type="Node2D" parent="."]
 
 [node name="Background" type="Sprite" parent="Tileset"]
-position = Vector2( 849.483, 311.477 )
-scale = Vector2( -211.6, -76.5563 )
+position = Vector2( 849.483, 247.822 )
+scale = Vector2( -211.6, -89.2873 )
 z_index = -5
 texture = SubResource( 2 )
 region_enabled = true

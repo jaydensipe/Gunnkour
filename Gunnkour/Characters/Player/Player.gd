@@ -4,7 +4,7 @@ var state_machine
 var grounded = false
 var can_jump = false
 var jump_time = 0
-const TOP_JUMP_TIME = 0.2
+const TOP_JUMP_TIME = 0.05
 
 var mouseLocation = Vector2()
 
@@ -89,12 +89,12 @@ func apply_force(state):
 		directional_force += DIRECTION.UP
 		jump_time += state.get_step()
 		top_speed = 100
+		if not $jump.playing:
+			$jump.play()
 	elif(Input.is_action_just_released("Jump")):
 		can_jump = false
 		top_speed = 100
-	
-	if(Input.is_action_just_pressed("Jump")):
-		$jump.play()
+		
 		
 	if(grounded):
 		can_jump = true

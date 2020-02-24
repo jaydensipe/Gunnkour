@@ -77,7 +77,7 @@ offset = Vector2( 43.6806, 24.5595 )
 
 [node name="Reload" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
-volume_db = -7.0
+volume_db = -10.0
 pitch_scale = 0.6
 
 [node name="Gunshot" type="AudioStreamPlayer" parent="."]

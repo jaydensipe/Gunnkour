@@ -71,6 +71,7 @@ pitch_scale = 0.6
 [node name="Gunshot" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
 volume_db = -0.5
+pitch_scale = 0.8
 
 [node name="smgshot" type="AnimationPlayer" parent="."]
 anims/Reload = SubResource( 1 )
