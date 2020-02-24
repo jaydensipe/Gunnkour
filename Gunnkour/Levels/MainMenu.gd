@@ -1,10 +1,5 @@
 extends Control
 
-func _ready():
-	$AudioStreamPlayer.play()
-
-
-
 
 func _on_Play_pressed():
 	get_tree().change_scene("res://Gunnkour/Levels/LevelSelectionScreen.tscn")

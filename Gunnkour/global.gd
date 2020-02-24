@@ -1,5 +1,6 @@
 extends Node
 
+
 var levelCounter = 1
 var equippedWeapon = 1
 
@@ -8,9 +9,10 @@ var equippedWeapon = 1
 var player
 var camera
 var score
+var menu
 
 func _ready():
-	pass 
+	$"/root/MusicPlayer".play()
 	
 func register_score(in_timer):
 	score = in_timer

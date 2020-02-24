@@ -8,8 +8,8 @@
 [ext_resource path="res://Gunnkour/EndBullet/EndBullet.tscn" type="PackedScene" id=8]
 
 [sub_resource type="Gradient" id=1]
-offsets = PoolRealArray( 0.993548 )
-colors = PoolColorArray( 0.103851, 0.469745, 0.648438, 1 )
+offsets = PoolRealArray( 0.992857 )
+colors = PoolColorArray( 0.367767, 0.796326, 0.914063, 1 )
 
 [sub_resource type="GradientTexture" id=2]
 gradient = SubResource( 1 )
@@ -64,7 +64,7 @@ position = Vector2( 511.551, 338.648 )
 z_index = 6
 
 [node name="KillZone" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1029.75, 580.416 )
+position = Vector2( 1029.75, 537.999 )
 scale = Vector2( 134.636, -9.65369 )
 
 [node name="EndBullet" parent="." instance=ExtResource( 8 )]
