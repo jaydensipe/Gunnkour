@@ -8,7 +8,6 @@
 z_index = 5
 current = true
 zoom = Vector2( 0.125, 0.125 )
-smoothing_speed = 10.0
 script = ExtResource( 1 )
 
 [node name="Pause" parent="." instance=ExtResource( 3 )]

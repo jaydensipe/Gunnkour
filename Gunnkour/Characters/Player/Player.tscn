@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Gunnkour/Characters/Player/Sprites/llegtop.png" type="Texture" id=1]
 [ext_resource path="res://Gunnkour/Characters/Player/Sprites/head.png" type="Texture" id=2]
@@ -11,8 +11,9 @@
 [ext_resource path="res://Gunnkour/Characters/Sounds/jump.wav" type="AudioStream" id=9]
 [ext_resource path="res://Gunnkour/Guns/Shotgun/Shotgun.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Gunnkour/Guns/SMG/SMG.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Gunnkour/Guns/BulletCounter.tscn" type="PackedScene" id=12]
 
-[sub_resource type="PhysicsMaterial" id=1]
+[sub_resource type="PhysicsMaterial" id=7]
 
 [sub_resource type="AnimationNodeAnimation" id=2]
 animation = "Idle"
@@ -32,9 +33,9 @@ states/Run/position = Vector2( 483, 151 )
 transitions = [ "Idle", "Run", SubResource( 4 ), "Run", "Idle", SubResource( 5 ) ]
 start_node = "Idle"
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=7]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=8]
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=9]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Head/LeftLeg:position")
 tracks/0/interp = 1
@@ -156,7 +157,7 @@ tracks/9/keys = {
 "values": [ 0.0 ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=10]
 length = 0.8
 loop = true
 step = 0.2
@@ -299,17 +300,31 @@ tracks/10/keys = {
 "times": PoolRealArray( 0.2, 0.6 )
 }
 
-[sub_resource type="RayShape2D" id=10]
+[sub_resource type="RayShape2D" id=11]
 
-[sub_resource type="CircleShape2D" id=11]
+[sub_resource type="CircleShape2D" id=12]
 
-[sub_resource type="RayShape2D" id=12]
+[sub_resource type="RayShape2D" id=13]
 
-[sub_resource type="CapsuleShape2D" id=13]
+[sub_resource type="CapsuleShape2D" id=14]
+
+[sub_resource type="Shader" id=15]
+code = "shader_type canvas_item;
+
+void vertex()
+{
+	VERTEX.x += cos(TIME + VERTEX.x) * 0.1;
+	VERTEX.y += sin(TIME + VERTEX.y) * 0.1
+	;
+	
+}"
+
+[sub_resource type="ShaderMaterial" id=16]
+shader = SubResource( 15 )
 
 [node name="Player" type="RigidBody2D"]
 mode = 2
-physics_material_override = SubResource( 1 )
+physics_material_override = SubResource( 7 )
 gravity_scale = 10.0
 script = ExtResource( 6 )
 
@@ -317,18 +332,18 @@ script = ExtResource( 6 )
 tree_root = SubResource( 6 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource( 7 )
+parameters/playback = SubResource( 8 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 playback_default_blend_time = 0.1
 playback_speed = 2.0
-anims/Idle = SubResource( 8 )
-anims/Run = SubResource( 9 )
+anims/Idle = SubResource( 9 )
+anims/Run = SubResource( 10 )
 
 [node name="CollisionFeet" type="CollisionShape2D" parent="."]
 position = Vector2( 0.127792, -0.737986 )
 scale = Vector2( 0.479141, 0.416201 )
-shape = SubResource( 10 )
+shape = SubResource( 11 )
 
 [node name="Footstep" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 0, 7.54237 )
@@ -343,24 +358,24 @@ pitch_scale = 0.8
 position = Vector2( 1.93859, 0.103797 )
 rotation = 1.5708
 scale = Vector2( 0.479141, 0.416201 )
-shape = SubResource( 10 )
+shape = SubResource( 11 )
 
 [node name="CollisionWall2" type="CollisionShape2D" parent="."]
 position = Vector2( -2.05709, -0.104 )
 rotation = -1.5708
 scale = Vector2( 0.479141, 0.416201 )
-shape = SubResource( 10 )
+shape = SubResource( 11 )
 
 [node name="CollisionWall3" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 3.38452 )
 rotation = 3.14159
 scale = Vector2( 0.479141, 0.416201 )
-shape = SubResource( 10 )
+shape = SubResource( 11 )
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2( -5.63854e-09, 0.140208 )
 scale = Vector2( 0.446845, 0.4458 )
-shape = SubResource( 11 )
+shape = SubResource( 12 )
 
 [node name="GroundCheck" type="Area2D" parent="."]
 position = Vector2( 0.153352, 3.5953 )
@@ -369,7 +384,7 @@ scale = Vector2( 0.413256, 0.367691 )
 [node name="Ground_Collision" type="CollisionShape2D" parent="GroundCheck"]
 position = Vector2( 0, 3.49523 )
 scale = Vector2( 0.455418, 0.455418 )
-shape = SubResource( 12 )
+shape = SubResource( 13 )
 
 [node name="WallCheck" type="Area2D" parent="."]
 position = Vector2( -0.0811062, -1.2977 )
@@ -378,9 +393,10 @@ scale = Vector2( 1.0474, 0.483046 )
 [node name="Wall_Collision" type="CollisionShape2D" parent="WallCheck"]
 position = Vector2( 0.0248947, 2.14091 )
 scale = Vector2( 0.603452, 0.387404 )
-shape = SubResource( 13 )
+shape = SubResource( 14 )
 
 [node name="Head" type="Sprite" parent="."]
+material = SubResource( 16 )
 scale = Vector2( 0.458223, 0.458223 )
 texture = ExtResource( 2 )
 
@@ -414,6 +430,13 @@ scale = Vector2( 0.398543, 0.398543 )
 visible = false
 position = Vector2( 2.83007, 1.83431 )
 scale = Vector2( 0.276006, 0.276006 )
+
+[node name="Control" parent="." instance=ExtResource( 12 )]
+margin_left = -32.2156
+margin_top = -15.7605
+margin_right = -32.2156
+margin_bottom = -15.7605
+rect_scale = Vector2( 0.563026, 0.563026 )
 [connection signal="body_entered" from="GroundCheck" to="." method="_on_GroundCheck_body_entered"]
 [connection signal="body_exited" from="GroundCheck" to="." method="_on_GroundCheck_body_exited"]
 [connection signal="area_entered" from="WallCheck" to="." method="_on_WallCheck_area_entered"]

@@ -3,9 +3,9 @@
 [ext_resource path="res://Gunnkour/Levels/SettingsMenu.gd" type="Script" id=1]
 [ext_resource path="res://Gunnkour/Killbox/ThaleahFat.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Gunnkour/Characters/Sounds/mainmenumusic.wav" type="AudioStream" id=3]
-[ext_resource path="res://Gunnkour/mainmenubackground.jpg" type="Texture" id=4]
+[ext_resource path="res://Gunnkour/Tilemap/mainmenubackground.jpg" type="Texture" id=4]
 
-[sub_resource type="Shader" id=5]
+[sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
 
 void vertex()
@@ -15,10 +15,10 @@ void vertex()
 	
 }"
 
-[sub_resource type="ShaderMaterial" id=6]
-shader = SubResource( 5 )
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
 
-[sub_resource type="Shader" id=1]
+[sub_resource type="Shader" id=3]
 code = "shader_type canvas_item;
 
 void vertex()
@@ -28,13 +28,13 @@ void vertex()
 	
 }"
 
-[sub_resource type="ShaderMaterial" id=2]
-shader = SubResource( 1 )
+[sub_resource type="ShaderMaterial" id=4]
+shader = SubResource( 3 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=5]
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=6]
 font_data = ExtResource( 2 )
 
 [node name="Control" type="Control"]
@@ -46,19 +46,19 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="."]
-material = SubResource( 6 )
+material = SubResource( 2 )
 position = Vector2( 946.817, 535.985 )
 scale = Vector2( 1.681, 1.681 )
 texture = ExtResource( 4 )
 
 [node name="Label4" type="Label" parent="."]
-material = SubResource( 2 )
+material = SubResource( 4 )
 margin_left = 504.192
 margin_top = 18.588
 margin_right = 596.192
 margin_bottom = 51.588
 rect_scale = Vector2( 16.1832, 15.7053 )
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0.317647, 0.329412, 0.0470588, 1 )
 text = "Settings
 "
@@ -67,13 +67,13 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-material = SubResource( 2 )
+material = SubResource( 4 )
 margin_left = 498.395
 margin_top = 12.0
 margin_right = 590.395
 margin_bottom = 45.0
 rect_scale = Vector2( 16.1832, 15.7053 )
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0.972549, 1, 0.14902, 1 )
 text = "Settings
 "
@@ -84,14 +84,48 @@ __meta__ = {
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 
+[node name="Label5" type="Label" parent="."]
+margin_left = 225.599
+margin_top = 289.018
+margin_right = 309.599
+margin_bottom = 304.018
+rect_scale = Vector2( 4.71791, 4.71791 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Fullscreen:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Label2" type="Label" parent="."]
 margin_left = 222.643
 margin_top = 286.374
 margin_right = 299.643
 margin_bottom = 301.374
 rect_scale = Vector2( 4.71791, 4.71791 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
 text = "Fullscreen:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox" type="CheckBox" parent="."]
+margin_left = 612.847
+margin_top = 280.779
+margin_right = 636.847
+margin_bottom = 304.779
+rect_scale = Vector2( 3.48544, 3.48544 )
+flat = true
+
+[node name="Label6" type="Label" parent="."]
+margin_left = 225.735
+margin_top = 357.725
+margin_right = 302.735
+margin_bottom = 372.725
+rect_scale = Vector2( 4.71791, 4.71791 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Eye Color: "
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -102,8 +136,16 @@ margin_top = 355.109
 margin_right = 299.643
 margin_bottom = 370.109
 rect_scale = Vector2( 4.71791, 4.71791 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
 text = "Eye Color: "
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="."]
+margin_left = 574.175
+margin_top = 381.723
+margin_right = 586.175
+margin_bottom = 401.723
+[connection signal="toggled" from="CheckBox" to="." method="_on_CheckBox_toggled"]
+[connection signal="color_changed" from="ColorPickerButton" to="." method="_on_ColorPickerButton_color_changed"]

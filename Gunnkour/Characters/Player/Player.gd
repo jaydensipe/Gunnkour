@@ -22,6 +22,8 @@ func _ready():
 	$SMG.set_physics_process(false)
 
 func _process(delta):
+	$Head.modulate = $"/root/global".color
+	
 	if Input.is_action_just_pressed("FirstW"):
 		$"/root/global".equippedWeapon = 1
 	

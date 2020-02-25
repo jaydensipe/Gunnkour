@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Gunnkour/Levels/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Gunnkour/Killbox/ThaleahFat.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://Gunnkour/mainmenubackground.jpg" type="Texture" id=3]
+[ext_resource path="res://Gunnkour/Tilemap/mainmenubackground.jpg" type="Texture" id=3]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;

@@ -33,14 +33,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label2" type="Label" parent="."]
-margin_left = 95.827
-margin_top = 164.503
-margin_right = 324.827
-margin_bottom = 179.503
-rect_scale = Vector2( 1.98092, 1.98092 )
+[node name="Settings" type="Button" parent="."]
+margin_left = 208.201
+margin_top = 165.704
+margin_right = 341.201
+margin_bottom = 186.704
+rect_scale = Vector2( 1.78478, 1.78478 )
 custom_fonts/font = SubResource( 2 )
-text = "Press \"f\" to return to main menu."
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "back to maIN MENU"
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="pressed" from="Settings" to="." method="_on_Settings_pressed"]

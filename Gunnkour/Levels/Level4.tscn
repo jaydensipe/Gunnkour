@@ -1,31 +1,21 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Gunnkour/Killbox/KillBox.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Gunnkour/Tilemap/CloudsT.tres" type="TileSet" id=2]
 [ext_resource path="res://Gunnkour/Characters/Player/Camera.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Gunnkour/Guns/Crosshairs/Crosshairs.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Gunnkour/Tilemap/Parallax/ParallaxBackground.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Gunnkour/Characters/Player/Player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Gunnkour/Tilemap/Tiles.tres" type="TileSet" id=7]
 [ext_resource path="res://Gunnkour/EndBullet/EndBullet.tscn" type="PackedScene" id=8]
 
-[sub_resource type="Gradient" id=1]
-offsets = PoolRealArray( 0.993548 )
-colors = PoolColorArray( 0.278431, 0.831373, 1, 1 )
-
-[sub_resource type="GradientTexture" id=2]
-gradient = SubResource( 1 )
-
 [node name="Level1" type="Node"]
 
-[node name="Tileset" type="Node2D" parent="."]
+[node name="ParallaxBackground" parent="." instance=ExtResource( 5 )]
+offset = Vector2( 0, -1200 )
+transform = Transform2D( 1, 0, 0, 1, 0, -1200 )
 
-[node name="Background" type="Sprite" parent="Tileset"]
-position = Vector2( 849.483, 311.477 )
-scale = Vector2( -211.6, -76.5563 )
-z_index = -5
-texture = SubResource( 2 )
-region_enabled = true
-region_rect = Rect2( 130, 40, 10, 10 )
+[node name="Tileset" type="Node2D" parent="."]
 
 [node name="Solids" type="TileMap" parent="Tileset" groups=[
 "Solid",
