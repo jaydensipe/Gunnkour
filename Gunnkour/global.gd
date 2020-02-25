@@ -14,6 +14,7 @@ var menu
 func _ready():
 	$"/root/MusicPlayer".play()
 	
+	
 func register_score(in_timer):
 	score = in_timer
 	

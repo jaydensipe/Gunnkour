@@ -333,11 +333,11 @@ shape = SubResource( 10 )
 [node name="Footstep" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 0, 7.54237 )
 stream = ExtResource( 7 )
-pitch_scale = 0.6
+pitch_scale = 0.2
 
 [node name="jump" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 9 )
-pitch_scale = 0.5
+pitch_scale = 0.8
 
 [node name="CollisionWall" type="CollisionShape2D" parent="."]
 position = Vector2( 1.93859, 0.103797 )
@@ -401,14 +401,17 @@ position = Vector2( 0, 6.03064 )
 texture = ExtResource( 3 )
 
 [node name="Shotgun" parent="." instance=ExtResource( 10 )]
+visible = false
 position = Vector2( 5.13494, 0.814539 )
 scale = Vector2( 0.307238, 0.307238 )
 
 [node name="Pistol" parent="." instance=ExtResource( 8 )]
+visible = false
 position = Vector2( 4.11612, 2.61566 )
 scale = Vector2( 0.398543, 0.398543 )
 
 [node name="SMG" parent="." instance=ExtResource( 11 )]
+visible = false
 position = Vector2( 2.83007, 1.83431 )
 scale = Vector2( 0.276006, 0.276006 )
 [connection signal="body_entered" from="GroundCheck" to="." method="_on_GroundCheck_body_entered"]

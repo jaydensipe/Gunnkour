@@ -11,8 +11,8 @@ var mouseLocation = Vector2()
 func _ready():
 	$"/root/global".register_player(self)
 	state_machine = $AnimationTree.get("parameters/playback")
-	acceleration = 600
-	top_speed = 120
+	acceleration = 100
+	top_speed = 100
 	top_jump_speed = 120
 	$Pistol.visible = false
 	$Pistol.set_physics_process(false)
@@ -68,13 +68,13 @@ func apply_force(state):
 	if (Input.is_action_pressed("Control")):
 		top_speed = 50
 	elif(Input.is_action_just_released("Control")): 
-		top_speed = 120
+		top_speed = 100
 	
 	
 	if (Input.is_action_pressed("Shift")):
-		top_speed = 160
+		top_speed = 150
 	elif(Input.is_action_just_released("Shift")):
-		top_speed = 120
+		top_speed = 100
 		
 	if(Input.is_action_pressed("Left")):
 		directional_force += DIRECTION.LEFT
@@ -88,12 +88,11 @@ func apply_force(state):
 	if(Input.is_action_pressed("Jump") && jump_time < TOP_JUMP_TIME && can_jump):
 		directional_force += DIRECTION.UP
 		jump_time += state.get_step()
-		top_speed = 100
+		$"/root/global".camera.shake = $"/root/global".camera.shake_magnitude*0.3
 		if not $jump.playing:
 			$jump.play()
 	elif(Input.is_action_just_released("Jump")):
 		can_jump = false
-		top_speed = 100
 		
 		
 	if(grounded):

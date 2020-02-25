@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Gunnkour/Killbox/KillBox.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Gunnkour/Tilemap/CloudsT.tres" type="TileSet" id=2]
 [ext_resource path="res://Gunnkour/Characters/Player/Camera.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Gunnkour/Guns/Crosshairs/Crosshairs.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Gunnkour/Characters/Player/Player.tscn" type="PackedScene" id=6]
@@ -9,7 +10,7 @@
 
 [sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0.993548 )
-colors = PoolColorArray( 0.19455, 0.501587, 0.585938, 1 )
+colors = PoolColorArray( 0.278431, 0.831373, 1, 1 )
 
 [sub_resource type="GradientTexture" id=2]
 gradient = SubResource( 1 )
@@ -45,6 +46,11 @@ tile_set = ExtResource( 7 )
 cell_size = Vector2( 8, 8 )
 format = 1
 
+[node name="Clouds" type="TileMap" parent="Tileset"]
+tile_set = ExtResource( 2 )
+format = 1
+tile_data = PoolIntArray( 10, 3, 0, 65542, 1, 0, 65550, 4, 0, 65559, 2, 0, 196618, 0, 0, 196625, 3, 0, 262159, 4, 0 )
+
 [node name="Player" type="Node2D" parent="." groups=[
 "Player",
 ]]
@@ -62,7 +68,7 @@ position = Vector2( 332.545, 119.134 )
 z_index = 6
 
 [node name="KillZone" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1028.55, 430.746 )
+position = Vector2( 1028.55, 329.906 )
 scale = Vector2( 134.636, -9.65369 )
 
 [node name="EndBullet" parent="." instance=ExtResource( 8 )]

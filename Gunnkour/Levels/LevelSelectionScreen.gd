@@ -7,7 +7,6 @@ func _process(delta):
 		
 	
 
-
 func _on_Play_pressed():
 	$"/root/global".levelCounter = 1
 	$"/root/MusicPlayer".stop()
@@ -55,3 +54,6 @@ func _on_Play7_pressed():
 	pass
 	
 	
+
+
+
