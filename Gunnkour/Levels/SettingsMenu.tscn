@@ -119,6 +119,7 @@ margin_bottom = 304.779
 rect_scale = Vector2( 3.48544, 3.48544 )
 custom_styles/focus = SubResource( 7 )
 flat = true
+align = 1
 
 [node name="Label6" type="Label" parent="."]
 margin_left = 225.735

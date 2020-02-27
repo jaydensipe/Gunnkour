@@ -12,8 +12,8 @@
 [node name="Level1" type="Node"]
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 5 )]
-offset = Vector2( 0, -1200 )
-transform = Transform2D( 1, 0, 0, 1, 0, -1200 )
+offset = Vector2( 0, -1250 )
+transform = Transform2D( 1, 0, 0, 1, 0, -1250 )
 
 [node name="Tileset" type="Node2D" parent="."]
 
