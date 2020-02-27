@@ -102,7 +102,7 @@ __meta__ = {
 [node name="Label2" type="Label" parent="."]
 margin_left = 222.643
 margin_top = 286.374
-margin_right = 299.643
+margin_right = 306.643
 margin_bottom = 301.374
 rect_scale = Vector2( 4.71791, 4.71791 )
 custom_fonts/font = SubResource( 6 )
@@ -111,21 +111,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CheckBox" type="CheckBox" parent="."]
-margin_left = 612.847
-margin_top = 280.779
-margin_right = 636.847
-margin_bottom = 304.779
-rect_scale = Vector2( 3.48544, 3.48544 )
-custom_styles/focus = SubResource( 7 )
-flat = true
-align = 1
-
 [node name="Label6" type="Label" parent="."]
 margin_left = 225.735
-margin_top = 357.725
+margin_top = 385.687
 margin_right = 302.735
-margin_bottom = 372.725
+margin_bottom = 400.687
 rect_scale = Vector2( 4.71791, 4.71791 )
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -134,22 +124,154 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label3" type="Label" parent="."]
-margin_left = 222.643
-margin_top = 355.109
-margin_right = 299.643
-margin_bottom = 370.109
+[node name="Label3" type="Button" parent="."]
+margin_left = 195.37
+margin_top = 369.085
+margin_right = 284.37
+margin_bottom = 390.085
 rect_scale = Vector2( 4.71791, 4.71791 )
+custom_styles/focus = SubResource( 7 )
 custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 0, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 0, 1 )
 text = "Eye Color: "
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorPickerButton" type="ColorPickerButton" parent="."]
-margin_left = 574.175
-margin_top = 381.723
-margin_right = 586.175
-margin_bottom = 401.723
-[connection signal="toggled" from="CheckBox" to="." method="_on_CheckBox_toggled"]
-[connection signal="color_changed" from="ColorPickerButton" to="." method="_on_ColorPickerButton_color_changed"]
+[node name="Label16" type="Button" parent="."]
+margin_left = 503.278
+margin_top = 275.197
+margin_right = 592.278
+margin_bottom = 296.197
+rect_scale = Vector2( 4.71791, 4.71791 )
+custom_styles/focus = SubResource( 7 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+text = "Off"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label15" type="Button" parent="."]
+margin_left = 499.861
+margin_top = 272.064
+margin_right = 588.861
+margin_bottom = 293.064
+rect_scale = Vector2( 4.71791, 4.71791 )
+custom_styles/focus = SubResource( 7 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
+text = "Off"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label14" type="Label" parent="."]
+margin_left = 588.629
+margin_top = 385.687
+margin_right = 665.629
+margin_bottom = 400.687
+rect_scale = Vector2( 4.71791, 4.71791 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "<-- Just click it ;*)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label13" type="Label" parent="."]
+margin_left = 585.537
+margin_top = 383.071
+margin_right = 662.537
+margin_bottom = 398.071
+rect_scale = Vector2( 4.71791, 4.71791 )
+custom_fonts/font = SubResource( 6 )
+text = "<-- Just click it ;*)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label8" type="Label" parent="."]
+margin_left = 225.735
+margin_top = 477.925
+margin_right = 334.735
+margin_bottom = 492.925
+rect_scale = Vector2( 4.71791, 4.71791 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Master volume: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label7" type="Label" parent="."]
+margin_left = 222.643
+margin_top = 475.309
+margin_right = 331.643
+margin_bottom = 490.309
+rect_scale = Vector2( 4.71791, 4.71791 )
+custom_fonts/font = SubResource( 6 )
+text = "Master volume: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label10" type="Label" parent="."]
+margin_left = 225.735
+margin_top = 578.703
+margin_right = 322.735
+margin_bottom = 593.703
+rect_scale = Vector2( 4.71791, 4.71791 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "MUSIC VOLUME: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label9" type="Label" parent="."]
+margin_left = 222.643
+margin_top = 576.087
+margin_right = 319.643
+margin_bottom = 591.087
+rect_scale = Vector2( 4.71791, 4.71791 )
+custom_fonts/font = SubResource( 6 )
+text = "MUSIC VOLUME: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label12" type="Label" parent="."]
+margin_left = 225.735
+margin_top = 675.1
+margin_right = 322.735
+margin_bottom = 690.1
+rect_scale = Vector2( 4.71791, 4.71791 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "SFX VOLUME: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label11" type="Label" parent="."]
+margin_left = 222.643
+margin_top = 672.484
+margin_right = 319.643
+margin_bottom = 687.484
+rect_scale = Vector2( 4.71791, 4.71791 )
+custom_fonts/font = SubResource( 6 )
+text = "SFX VOLUME: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Label3" to="." method="_on_Label3_pressed"]
+[connection signal="pressed" from="Label16" to="." method="_on_Label15_pressed"]
+[connection signal="pressed" from="Label15" to="." method="_on_Label15_pressed"]

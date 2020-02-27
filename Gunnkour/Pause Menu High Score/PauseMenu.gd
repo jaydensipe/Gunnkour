@@ -23,3 +23,9 @@ func _on_Settings2_pressed():
 	$"/root/MusicPlayer".play()
 	get_tree().change_scene("res://Gunnkour/Levels/MainMenu.tscn")
 	pass # Replace with function body.
+
+
+func _on_Settings3_pressed():
+	get_tree().reload_current_scene()
+	get_tree().paused = false
+	pass # Replace with function body.
