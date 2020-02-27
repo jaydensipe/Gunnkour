@@ -8,6 +8,7 @@
 z_index = 5
 current = true
 zoom = Vector2( 0.125, 0.125 )
+smoothing_speed = 15.0
 script = ExtResource( 1 )
 
 [node name="Pause" parent="." instance=ExtResource( 3 )]
@@ -17,6 +18,13 @@ margin_top = -58.3318
 margin_right = 559.817
 margin_bottom = 312.668
 rect_scale = Vector2( 0.322059, 0.322059 )
+
+[node name="Timer2" parent="." instance=ExtResource( 2 )]
+margin_left = 78.4137
+margin_top = -66.0536
+margin_right = 118.414
+margin_bottom = -26.0536
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 
 [node name="Timer" parent="." instance=ExtResource( 2 )]
 margin_left = 77.3026

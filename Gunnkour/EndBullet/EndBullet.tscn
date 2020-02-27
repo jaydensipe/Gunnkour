@@ -1,44 +1,35 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Gunnkour/EndBullet/EndBullet.gd" type="Script" id=1]
 [ext_resource path="res://Gunnkour/EndBullet/endbullet.png" type="Texture" id=2]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="Shader" id=5]
+code = "shader_type canvas_item;
 
-[sub_resource type="Animation" id=2]
-resource_name = "Idle"
-length = 2.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 2 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 0, -166.788 ), Vector2( 0, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:rotation_degrees")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 1, 2 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0 ]
-}
+void vertex()
+{
+	VERTEX.x += cos(TIME + VERTEX.x) * 10.0;
+	VERTEX.y += sin(TIME + VERTEX.y) * 15.5;
+	
+}"
+
+[sub_resource type="ShaderMaterial" id=6]
+shader = SubResource( 5 )
+
+[sub_resource type="RectangleShape2D" id=3]
 
 [node name="EndBullet" type="Node2D"]
 scale = Vector2( 0.435206, 0.435206 )
 script = ExtResource( 1 )
 
+[node name="Sprite2" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+material = SubResource( 6 )
+position = Vector2( 16.5318, 10.6768 )
+texture = ExtResource( 2 )
+
 [node name="Sprite" type="Sprite" parent="."]
+material = SubResource( 6 )
 texture = ExtResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="Sprite"]
@@ -46,8 +37,5 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/Area2D"]
 position = Vector2( 0, 16.3289 )
 scale = Vector2( 25.7969, 16.1226 )
-shape = SubResource( 1 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Idle = SubResource( 2 )
+shape = SubResource( 3 )
 [connection signal="body_entered" from="Sprite/Area2D" to="." method="_on_Area2D_body_entered"]

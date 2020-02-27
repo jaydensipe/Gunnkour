@@ -1,13 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Gunnkour/Pause Menu High Score/Control.gd" type="Script" id=1]
+[ext_resource path="res://Gunnkour/Pause Menu High Score/PauseMenu.gd" type="Script" id=1]
 [ext_resource path="res://Gunnkour/Killbox/ThaleahFat.ttf" type="DynamicFontData" id=2]
 
 [sub_resource type="DynamicFont" id=1]
+size = 32
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxEmpty" id=3]
 
 [node name="Pause" type="Control"]
 pause_mode = 2
@@ -18,32 +21,67 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Label2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -216.052
+margin_right = -120.052
+margin_bottom = 30.0
+rect_scale = Vector2( 4.67521, 4.78932 )
+rect_pivot_offset = Vector2( 1.06451, -0.315874 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.345098, 0.027451, 0.160784, 1 )
+text = "PAUSED"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Label" type="Label" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -111.365
-margin_top = 41.1487
-margin_right = -63.3655
-margin_bottom = 56.1487
+margin_left = -216.052
+margin_right = -120.052
+margin_bottom = 30.0
 rect_scale = Vector2( 4.63685, 4.63685 )
 rect_pivot_offset = Vector2( 1.06451, -0.315874 )
 custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.952941, 0.0823529, 0.45098, 1 )
 text = "PAUSED"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Settings" type="Button" parent="."]
-margin_left = 208.201
-margin_top = 165.704
-margin_right = 341.201
-margin_bottom = 186.704
-rect_scale = Vector2( 1.78478, 1.78478 )
+margin_left = 144.908
+margin_top = 176.653
+margin_right = 277.908
+margin_bottom = 197.653
+rect_scale = Vector2( 2.79, 2.79 )
 custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "back to maIN MENU"
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="Settings" to="." method="_on_Settings_pressed"]
+
+[node name="Settings2" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -189.796
+margin_top = -10.5
+margin_right = -56.7957
+margin_bottom = 10.5
+rect_scale = Vector2( 2.79047, 2.79047 )
+custom_styles/focus = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.952941, 0.756863, 0.945098, 1 )
+custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
+text = "back to maIN MENU"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Settings2" to="." method="_on_Settings2_pressed"]

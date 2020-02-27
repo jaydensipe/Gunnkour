@@ -16,7 +16,7 @@ void vertex()
 [sub_resource type="ShaderMaterial" id=3]
 shader = SubResource( 2 )
 
-[sub_resource type="Shader" id=6]
+[sub_resource type="Shader" id=4]
 code = "shader_type canvas_item;
 
 void vertex()
@@ -25,8 +25,8 @@ void vertex()
 	
 }"
 
-[sub_resource type="ShaderMaterial" id=7]
-shader = SubResource( 6 )
+[sub_resource type="ShaderMaterial" id=5]
+shader = SubResource( 4 )
 
 [resource]
 0/name = "0"
@@ -668,7 +668,7 @@ shader = SubResource( 6 )
 45/name = "38"
 45/texture = ExtResource( 1 )
 45/tex_offset = Vector2( 0, 0 )
-45/material = SubResource( 7 )
+45/material = SubResource( 5 )
 45/modulate = Color( 1, 1, 1, 1 )
 45/region = Rect2( 72, 8, 8, 8 )
 45/tile_mode = 0
@@ -679,7 +679,7 @@ shader = SubResource( 6 )
 46/name = "39"
 46/texture = ExtResource( 1 )
 46/tex_offset = Vector2( 0, 0 )
-46/material = SubResource( 7 )
+46/material = SubResource( 5 )
 46/modulate = Color( 1, 1, 1, 1 )
 46/region = Rect2( 80, 8, 8, 8 )
 46/tile_mode = 0
@@ -690,7 +690,7 @@ shader = SubResource( 6 )
 47/name = "40"
 47/texture = ExtResource( 1 )
 47/tex_offset = Vector2( 0, 0 )
-47/material = SubResource( 7 )
+47/material = SubResource( 5 )
 47/modulate = Color( 1, 1, 1, 1 )
 47/region = Rect2( 88, 8, 8, 8 )
 47/tile_mode = 0

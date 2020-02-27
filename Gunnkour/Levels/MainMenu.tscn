@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Gunnkour/Levels/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Gunnkour/Killbox/ThaleahFat.ttf" type="DynamicFontData" id=2]
@@ -33,7 +33,9 @@ shader = SubResource( 3 )
 [sub_resource type="DynamicFont" id=5]
 font_data = ExtResource( 2 )
 
-[sub_resource type="Shader" id=6]
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="Shader" id=7]
 code = "shader_type canvas_item;
 
 void vertex()
@@ -43,13 +45,15 @@ void vertex()
 	
 }"
 
-[sub_resource type="ShaderMaterial" id=7]
-shader = SubResource( 6 )
+[sub_resource type="ShaderMaterial" id=8]
+shader = SubResource( 7 )
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="DynamicFont" id=10]
 font_data = ExtResource( 2 )
 
-[sub_resource type="Shader" id=9]
+[sub_resource type="Shader" id=11]
 code = "shader_type canvas_item;
 
 void vertex()
@@ -59,8 +63,8 @@ void vertex()
 	
 }"
 
-[sub_resource type="ShaderMaterial" id=10]
-shader = SubResource( 9 )
+[sub_resource type="ShaderMaterial" id=12]
+shader = SubResource( 11 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -75,6 +79,9 @@ material = SubResource( 2 )
 position = Vector2( 946.817, 535.985 )
 scale = Vector2( 1.68114, 1.68114 )
 texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Label2" type="Label" parent="."]
 material = SubResource( 4 )
@@ -91,17 +98,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label5" type="Label" parent="."]
+[node name="Label5" type="Button" parent="."]
 material = SubResource( 4 )
-margin_left = 1362.21
-margin_top = 992.275
-margin_right = 1466.21
-margin_bottom = 1025.27
+margin_left = 1326.42
+margin_top = 952.275
+margin_right = 1442.42
+margin_bottom = 985.27
 rect_scale = Vector2( 5.15626, 5.004 )
+custom_styles/focus = SubResource( 6 )
 custom_fonts/font = SubResource( 5 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "made by jayden
 "
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -118,6 +126,7 @@ custom_colors/font_color = Color( 0, 0.211765, 0.0666667, 1 )
 text = "Gunnkour
 "
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -137,13 +146,14 @@ __meta__ = {
 }
 
 [node name="Play2" type="Button" parent="."]
-material = SubResource( 7 )
+material = SubResource( 8 )
 margin_left = 127.019
 margin_top = 458.178
 margin_right = 174.019
 margin_bottom = 479.178
 rect_scale = Vector2( 6.06068, 6.06068 )
-custom_fonts/font = SubResource( 8 )
+custom_styles/focus = SubResource( 9 )
+custom_fonts/font = SubResource( 10 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 action_mode = 0
@@ -155,14 +165,16 @@ __meta__ = {
 }
 
 [node name="Play" type="Button" parent="."]
-material = SubResource( 7 )
+material = SubResource( 8 )
 margin_left = 121.923
 margin_top = 452.618
 margin_right = 168.923
 margin_bottom = 473.618
 rect_scale = Vector2( 6.06068, 6.06068 )
-custom_fonts/font = SubResource( 8 )
+custom_styles/focus = SubResource( 9 )
+custom_fonts/font = SubResource( 10 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
 action_mode = 0
 text = "PLAY!"
 flat = true
@@ -172,13 +184,14 @@ __meta__ = {
 }
 
 [node name="Settings2" type="Button" parent="."]
-material = SubResource( 10 )
+material = SubResource( 12 )
 margin_left = 126.084
 margin_top = 619.414
 margin_right = 198.084
 margin_bottom = 640.414
 rect_scale = Vector2( 6.06068, 6.06068 )
-custom_fonts/font = SubResource( 8 )
+custom_styles/focus = SubResource( 9 )
+custom_fonts/font = SubResource( 10 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 action_mode = 0
@@ -190,14 +203,16 @@ __meta__ = {
 }
 
 [node name="Settings" type="Button" parent="."]
-material = SubResource( 10 )
+material = SubResource( 12 )
 margin_left = 121.923
 margin_top = 614.698
 margin_right = 168.923
 margin_bottom = 635.698
 rect_scale = Vector2( 6.06068, 6.06068 )
-custom_fonts/font = SubResource( 8 )
+custom_styles/focus = SubResource( 9 )
+custom_fonts/font = SubResource( 10 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
 action_mode = 0
 text = "SETTINGS!"
 flat = true
@@ -207,13 +222,14 @@ __meta__ = {
 }
 
 [node name="Exit2" type="Button" parent="."]
-material = SubResource( 10 )
+material = SubResource( 12 )
 margin_left = 124.647
 margin_top = 780.524
 margin_right = 171.647
 margin_bottom = 801.524
 rect_scale = Vector2( 6.06068, 6.06068 )
-custom_fonts/font = SubResource( 8 )
+custom_styles/focus = SubResource( 9 )
+custom_fonts/font = SubResource( 10 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 action_mode = 0
@@ -225,14 +241,16 @@ __meta__ = {
 }
 
 [node name="Exit" type="Button" parent="."]
-material = SubResource( 10 )
+material = SubResource( 12 )
 margin_left = 121.923
 margin_top = 776.778
 margin_right = 168.923
 margin_bottom = 797.778
 rect_scale = Vector2( 6.06068, 6.06068 )
-custom_fonts/font = SubResource( 8 )
+custom_styles/focus = SubResource( 9 )
+custom_fonts/font = SubResource( 10 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
 action_mode = 0
 text = "EXIT!"
 flat = true
@@ -240,6 +258,7 @@ align = 0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="pressed" from="Label5" to="." method="_on_Label5_pressed"]
 [connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="Settings2" to="." method="_on_Settings_pressed"]
 [connection signal="pressed" from="Settings" to="." method="_on_Settings_pressed"]

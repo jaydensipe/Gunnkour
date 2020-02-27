@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Gunnkour/Levels/SettingsMenu.gd" type="Script" id=1]
 [ext_resource path="res://Gunnkour/Killbox/ThaleahFat.ttf" type="DynamicFontData" id=2]
@@ -36,6 +36,8 @@ font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=6]
 font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxEmpty" id=7]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -115,6 +117,7 @@ margin_top = 280.779
 margin_right = 636.847
 margin_bottom = 304.779
 rect_scale = Vector2( 3.48544, 3.48544 )
+custom_styles/focus = SubResource( 7 )
 flat = true
 
 [node name="Label6" type="Label" parent="."]
