@@ -29,6 +29,8 @@ font_data = ExtResource( 2 )
 [node name="Level1" type="Node"]
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 9 )]
+offset = Vector2( 0, -300 )
+transform = Transform2D( 1, 0, 0, 1, 0, -300 )
 
 [node name="Control" type="Control" parent="."]
 margin_left = 716.886

@@ -1,8 +1,32 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Gunnkour/Tilemap/tileset.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
+
+[sub_resource type="Shader" id=2]
+code = "shader_type canvas_item;
+
+void vertex()
+{
+	VERTEX.x += cos(TIME + VERTEX.x) * 0.7;
+	
+}"
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = SubResource( 2 )
+
+[sub_resource type="Shader" id=6]
+code = "shader_type canvas_item;
+
+void vertex()
+{
+	VERTEX.x += cos(TIME + VERTEX.x) * 0.7;
+	
+}"
+
+[sub_resource type="ShaderMaterial" id=7]
+shader = SubResource( 6 )
 
 [node name="Tilemap" type="Node2D"]
 
@@ -367,36 +391,42 @@ scale = Vector2( 0.42, 0.42 )
 shape = SubResource( 1 )
 
 [node name="22" type="Sprite" parent="."]
+material = SubResource( 3 )
 position = Vector2( 44.8158, 5.63234 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 40, 8, 8, 8 )
 
 [node name="23" type="Sprite" parent="."]
+material = SubResource( 3 )
 position = Vector2( 56.0728, 5.63234 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 48, 8, 8, 8 )
 
 [node name="24" type="Sprite" parent="."]
+material = SubResource( 3 )
 position = Vector2( 67.2567, 5.63234 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 56, 8, 8, 8 )
 
 [node name="25" type="Sprite" parent="."]
+material = SubResource( 3 )
 position = Vector2( 44.7427, 16.0566 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 40, 24, 8, 8 )
 
 [node name="26" type="Sprite" parent="."]
+material = SubResource( 3 )
 position = Vector2( 56.219, 16.0566 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 48, 24, 8, 8 )
 
 [node name="27" type="Sprite" parent="."]
+material = SubResource( 3 )
 position = Vector2( 65.9613, 16.0566 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -457,18 +487,21 @@ region_enabled = true
 region_rect = Rect2( 56, 56, 8, 8 )
 
 [node name="38" type="Sprite" parent="."]
+material = SubResource( 7 )
 position = Vector2( 89.7114, 5.63234 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 72, 8, 8, 8 )
 
 [node name="39" type="Sprite" parent="."]
+material = SubResource( 7 )
 position = Vector2( 101.378, 5.63234 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 80, 8, 8, 8 )
 
 [node name="40" type="Sprite" parent="."]
+material = SubResource( 7 )
 position = Vector2( 112.955, 5.63234 )
 texture = ExtResource( 1 )
 region_enabled = true

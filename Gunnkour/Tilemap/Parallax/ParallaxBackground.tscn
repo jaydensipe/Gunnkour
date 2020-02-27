@@ -1,25 +1,41 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Gunnkour/Tilemap/Parallax/BGFront.png" type="Texture" id=1]
 [ext_resource path="res://Gunnkour/Tilemap/Parallax/BGBack.png" type="Texture" id=2]
 [ext_resource path="res://Gunnkour/Tilemap/Parallax/CloudsFront.png" type="Texture" id=3]
 [ext_resource path="res://Gunnkour/Tilemap/Parallax/CloudsBack.png" type="Texture" id=4]
 
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+void vertex()
+{
+	VERTEX.x += cos(TIME + VERTEX.x) * 0.5;
+	VERTEX.y += sin(TIME + VERTEX.y) * 0.5;
+	
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+
 [node name="ParallaxBackground" type="ParallaxBackground"]
 
 [node name="cloudsback" type="ParallaxLayer" parent="."]
 position = Vector2( 671.354, 280.196 )
 motion_scale = Vector2( 0.6, 0.6 )
-motion_mirroring = Vector2( 512, 0 )
+motion_mirroring = Vector2( 510, 0 )
 
 [node name="Sprite" type="Sprite" parent="cloudsback"]
+material = SubResource( 2 )
 texture = ExtResource( 4 )
 
 [node name="Sprite2" type="Sprite" parent="cloudsback"]
+material = SubResource( 2 )
 texture = ExtResource( 3 )
 
 [node name="Sprite3" type="Sprite" parent="cloudsback"]
 texture = ExtResource( 2 )
 
 [node name="Sprite4" type="Sprite" parent="cloudsback"]
+scale = Vector2( 1.00648, 0.99632 )
 texture = ExtResource( 1 )

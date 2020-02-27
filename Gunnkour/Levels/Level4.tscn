@@ -62,5 +62,5 @@ position = Vector2( 1028.55, 329.906 )
 scale = Vector2( 134.636, -9.65369 )
 
 [node name="EndBullet" parent="." instance=ExtResource( 8 )]
-position = Vector2( 1389.84, 69.7073 )
+position = Vector2( 1389.84, 79.1504 )
 scale = Vector2( 0.0706425, 0.0706425 )

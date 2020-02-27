@@ -73,20 +73,32 @@ func apply_force(state):
 		top_speed = 100
 	
 	
-	if (Input.is_action_pressed("Shift")):
+	if (Input.is_action_pressed("Shift") && Input.is_action_pressed("Right")):
 		top_speed = 150
-	elif(Input.is_action_just_released("Shift")):
+		directional_force += DIRECTION.RIGHT
+		state_machine.travel("Sprint")
+		$Head.set_flip_h(false)
+	elif(Input.is_action_pressed("Right")):
 		top_speed = 100
-		
-	if(Input.is_action_pressed("Left")):
-		directional_force += DIRECTION.LEFT
-		state_machine.travel("Run")
-		$Head.set_flip_h(true)
-	if(Input.is_action_pressed("Right")):
 		directional_force += DIRECTION.RIGHT
 		state_machine.travel("Run")
 		$Head.set_flip_h(false)
 		
+	if (Input.is_action_pressed("Shift") && Input.is_action_pressed("Left")):
+		top_speed = 150
+		directional_force += DIRECTION.LEFT
+		state_machine.travel("Sprint")
+		$Head.set_flip_h(true)
+	elif(Input.is_action_pressed("Left")):
+		top_speed = 100
+		directional_force += DIRECTION.LEFT
+		state_machine.travel("Run")
+		$Head.set_flip_h(true)
+		
+		
+	elif(Input.is_action_just_released("Shift")):
+		top_speed = 100
+
 	if(Input.is_action_pressed("Jump") && jump_time < TOP_JUMP_TIME && can_jump):
 		directional_force += DIRECTION.UP
 		jump_time += state.get_step()
