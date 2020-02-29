@@ -16,7 +16,7 @@ void vertex()
 [sub_resource type="ShaderMaterial" id=3]
 shader = SubResource( 2 )
 
-[sub_resource type="Shader" id=6]
+[sub_resource type="Shader" id=4]
 code = "shader_type canvas_item;
 
 void vertex()
@@ -25,8 +25,8 @@ void vertex()
 	
 }"
 
-[sub_resource type="ShaderMaterial" id=7]
-shader = SubResource( 6 )
+[sub_resource type="ShaderMaterial" id=5]
+shader = SubResource( 4 )
 
 [node name="Tilemap" type="Node2D"]
 
@@ -487,21 +487,21 @@ region_enabled = true
 region_rect = Rect2( 56, 56, 8, 8 )
 
 [node name="38" type="Sprite" parent="."]
-material = SubResource( 7 )
+material = SubResource( 5 )
 position = Vector2( 89.7114, 5.63234 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 72, 8, 8, 8 )
 
 [node name="39" type="Sprite" parent="."]
-material = SubResource( 7 )
+material = SubResource( 5 )
 position = Vector2( 101.378, 5.63234 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 80, 8, 8, 8 )
 
 [node name="40" type="Sprite" parent="."]
-material = SubResource( 7 )
+material = SubResource( 5 )
 position = Vector2( 112.955, 5.63234 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -525,307 +525,11 @@ texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 72, 56, 8, 8 )
 
-[node name="52" type="Sprite" parent="."]
-position = Vector2( 126.417, 59.4596 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 72, 56, 8, 8 )
-
-[node name="53" type="Sprite" parent="."]
-position = Vector2( 138.408, 59.4596 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 72, 56, 8, 8 )
-
-[node name="54" type="Sprite" parent="."]
-position = Vector2( 151.03, 59.4596 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 72, 56, 8, 8 )
-
-[node name="55" type="Sprite" parent="."]
-position = Vector2( 165.073, 59.4596 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 72, 56, 8, 8 )
-
-[node name="56" type="Sprite" parent="."]
-position = Vector2( 178.011, 59.4596 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 72, 56, 8, 8 )
-
-[node name="57" type="Sprite" parent="."]
-position = Vector2( 191.106, 59.4596 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 72, 56, 8, 8 )
-
-[node name="58" type="Sprite" parent="."]
-position = Vector2( 203.728, 59.4596 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 72, 56, 8, 8 )
-
-[node name="59" type="Sprite" parent="."]
-position = Vector2( 217.928, 59.4596 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 72, 56, 8, 8 )
-
 [node name="68" type="Sprite" parent="."]
 position = Vector2( 93.7114, 61.1952 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 72, 56, 8, 8 )
-
-[node name="67" type="Sprite" parent="."]
-position = Vector2( 126.417, 59.4596 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 112, 32, 8, 8 )
-
-[node name="66" type="Sprite" parent="."]
-position = Vector2( 138.408, 59.4596 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 120, 32, 8, 8 )
-
-[node name="65" type="Sprite" parent="."]
-position = Vector2( 151.03, 59.4596 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 128, 32, 8, 8 )
-
-[node name="64" type="Sprite" parent="."]
-position = Vector2( 165.073, 59.4596 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 136, 32, 8, 8 )
-
-[node name="63" type="Sprite" parent="."]
-position = Vector2( 178.011, 59.4596 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 144, 32, 8, 8 )
-
-[node name="62" type="Sprite" parent="."]
-position = Vector2( 191.106, 59.4596 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 152, 32, 8, 8 )
-
-[node name="61" type="Sprite" parent="."]
-position = Vector2( 203.728, 59.4596 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 160, 32, 8, 8 )
-
-[node name="60" type="Sprite" parent="."]
-position = Vector2( 217.928, 59.4596 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 168, 32, 8, 8 )
-
-[node name="76" type="Sprite" parent="."]
-position = Vector2( 126.417, 71.6435 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 112, 40, 8, 8 )
-
-[node name="75" type="Sprite" parent="."]
-position = Vector2( 138.408, 71.6435 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 120, 40, 8, 8 )
-
-[node name="74" type="Sprite" parent="."]
-position = Vector2( 151.03, 71.6435 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 128, 40, 8, 8 )
-
-[node name="73" type="Sprite" parent="."]
-position = Vector2( 165.073, 71.6435 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 136, 40, 8, 8 )
-
-[node name="72" type="Sprite" parent="."]
-position = Vector2( 178.011, 71.6435 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 144, 40, 8, 8 )
-
-[node name="71" type="Sprite" parent="."]
-position = Vector2( 191.106, 71.6435 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 152, 40, 8, 8 )
-
-[node name="70" type="Sprite" parent="."]
-position = Vector2( 203.728, 71.6435 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 160, 40, 8, 8 )
-
-[node name="69" type="Sprite" parent="."]
-position = Vector2( 217.928, 71.6435 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 168, 40, 8, 8 )
-
-[node name="84" type="Sprite" parent="."]
-position = Vector2( 126.417, 83.3191 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 112, 48, 8, 8 )
-
-[node name="83" type="Sprite" parent="."]
-position = Vector2( 138.408, 83.3191 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 120, 48, 8, 8 )
-
-[node name="82" type="Sprite" parent="."]
-position = Vector2( 151.03, 83.3191 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 128, 48, 8, 8 )
-
-[node name="81" type="Sprite" parent="."]
-position = Vector2( 165.073, 83.3191 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 136, 48, 8, 8 )
-
-[node name="80" type="Sprite" parent="."]
-position = Vector2( 178.011, 83.3191 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 144, 48, 8, 8 )
-
-[node name="79" type="Sprite" parent="."]
-position = Vector2( 191.106, 83.3191 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 152, 48, 8, 8 )
-
-[node name="78" type="Sprite" parent="."]
-position = Vector2( 203.728, 83.3191 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 160, 48, 8, 8 )
-
-[node name="77" type="Sprite" parent="."]
-position = Vector2( 217.928, 83.3191 )
-z_index = -5
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 168, 48, 8, 8 )
-
-[node name="92" type="Sprite" parent="."]
-position = Vector2( 213.928, 104.01 )
-z_index = -5
-texture = ExtResource( 1 )
-offset = Vector2( -87.5114, -9.20856 )
-region_enabled = true
-region_rect = Rect2( 112, 56, 8, 8 )
-
-[node name="91" type="Sprite" parent="."]
-position = Vector2( 213.928, 104.01 )
-z_index = -5
-texture = ExtResource( 1 )
-offset = Vector2( -75.5203, -9.20856 )
-region_enabled = true
-region_rect = Rect2( 120, 56, 8, 8 )
-
-[node name="90" type="Sprite" parent="."]
-position = Vector2( 213.928, 104.01 )
-z_index = -5
-texture = ExtResource( 1 )
-offset = Vector2( -62.898, -9.20856 )
-region_enabled = true
-region_rect = Rect2( 128, 56, 8, 8 )
-
-[node name="89" type="Sprite" parent="."]
-position = Vector2( 213.928, 104.01 )
-z_index = -5
-texture = ExtResource( 1 )
-offset = Vector2( -48.8557, -9.20856 )
-region_enabled = true
-region_rect = Rect2( 136, 56, 8, 8 )
-
-[node name="88" type="Sprite" parent="."]
-position = Vector2( 213.928, 104.01 )
-z_index = -5
-texture = ExtResource( 1 )
-offset = Vector2( -35.9179, -9.20856 )
-region_enabled = true
-region_rect = Rect2( 144, 56, 8, 8 )
-
-[node name="87" type="Sprite" parent="."]
-position = Vector2( 213.928, 104.01 )
-z_index = -5
-texture = ExtResource( 1 )
-offset = Vector2( -22.8223, -9.20856 )
-region_enabled = true
-region_rect = Rect2( 152, 56, 8, 8 )
-
-[node name="86" type="Sprite" parent="."]
-position = Vector2( 213.928, 104.01 )
-z_index = -5
-texture = ExtResource( 1 )
-offset = Vector2( -10.2, -9.20856 )
-region_enabled = true
-region_rect = Rect2( 160, 56, 8, 8 )
-
-[node name="85" type="Sprite" parent="."]
-position = Vector2( 213.928, 104.01 )
-z_index = -5
-texture = ExtResource( 1 )
-offset = Vector2( 4, -9.20856 )
-region_enabled = true
-region_rect = Rect2( 168, 56, 8, 8 )
-
-[node name="93" type="Sprite" parent="."]
-position = Vector2( 213.928, 104.01 )
-z_index = -5
-texture = ExtResource( 1 )
-offset = Vector2( 4, -9.20856 )
-region_enabled = true
-region_rect = Rect2( 168, 56, 8, 8 )
 
 [node name="DARK" type="Sprite" parent="."]
 position = Vector2( 60.0728, 106.692 )

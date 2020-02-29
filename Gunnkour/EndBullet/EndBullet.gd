@@ -15,4 +15,22 @@ func _on_Area2D_body_entered(body):
 			get_tree().change_scene("res://Gunnkour/Levels/Level5.tscn")
 		6:
 			get_tree().change_scene("res://Gunnkour/Levels/Level6.tscn")
+		7:
+			get_tree().change_scene("res://Gunnkour/Levels/Level7.tscn")
+		8:
+			get_tree().change_scene("res://Gunnkour/Levels/Level8.tscn")
+		9:
+			get_tree().change_scene("res://Gunnkour/Levels/Level9.tscn")
+		10:
+			get_tree().change_scene("res://Gunnkour/Levels/Level10.tscn")
+		11:
+			get_tree().change_scene("res://Gunnkour/Levels/Level11.tscn")
+		12:
+			get_tree().change_scene("res://Gunnkour/Levels/Level12.tscn")
+		13:
+			get_tree().change_scene("res://Gunnkour/Levels/Level13.tscn")
+		14:
+			get_tree().change_scene("res://Gunnkour/Levels/Level14.tscn")
+	
+	
 	

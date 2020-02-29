@@ -1,6 +1,7 @@
 extends Control
 
 func _ready():
+	$"/root/global".isDead = 0
 	if ($"/root/global".gunnkourCounter == 0):
 		$gunnkour.play()
 		$"/root/global".gunnkourCounter += 1

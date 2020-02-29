@@ -361,8 +361,25 @@ anims/Idle = SubResource( 15 )
 anims/Run = SubResource( 16 )
 
 [node name="CollisionFeet" type="CollisionShape2D" parent="."]
-position = Vector2( -0.115013, -0.822968 )
-scale = Vector2( 1.19495, 0.415041 )
+position = Vector2( -1.16186, 4.96505 )
+scale = Vector2( 0.158171, 0.158171 )
+shape = SubResource( 17 )
+
+[node name="CollisionFeet2" type="CollisionShape2D" parent="."]
+position = Vector2( 0.753349, 4.99628 )
+scale = Vector2( 0.158171, 0.158171 )
+shape = SubResource( 17 )
+
+[node name="CollisionFeet3" type="CollisionShape2D" parent="."]
+position = Vector2( -1.2744, 6.29449 )
+rotation = -1.57079
+scale = Vector2( 0.115132, 0.115132 )
+shape = SubResource( 17 )
+
+[node name="CollisionFeet4" type="CollisionShape2D" parent="."]
+position = Vector2( 1.14136, 6.31201 )
+rotation = 1.57079
+scale = Vector2( 0.138063, 0.138063 )
 shape = SubResource( 17 )
 
 [node name="Footstep" type="AudioStreamPlayer2D" parent="."]
@@ -398,7 +415,7 @@ scale = Vector2( 0.446845, 0.4458 )
 shape = SubResource( 19 )
 
 [node name="GroundCheck" type="Area2D" parent="."]
-position = Vector2( 0.153352, 3.5953 )
+position = Vector2( -0.114537, 5.00541 )
 scale = Vector2( 0.413256, 0.367691 )
 
 [node name="Ground_Collision" type="CollisionShape2D" parent="GroundCheck"]

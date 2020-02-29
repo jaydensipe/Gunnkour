@@ -63,6 +63,9 @@ func apply_force(state):
 	var current = state_machine.get_current_node()
 	state_machine.travel("Idle")
 	
+	if ($"/root/global".isDead == 1):
+		top_speed = 0
+	
 	if (Input.is_action_pressed("Control")):
 		top_speed = 50
 	elif(Input.is_action_just_released("Control")): 
@@ -104,6 +107,7 @@ func apply_force(state):
 		can_jump = true
 		jump_time = 0
 	if(!grounded):
+		can_jump = false
 		$Footstep.stop()
 		state_machine.travel("Idle")
 
