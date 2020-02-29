@@ -3,7 +3,7 @@
 [ext_resource path="res://Gunnkour/Killbox/ThaleahFat.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Gunnkour/Guns/BulletCounter.gd" type="Script" id=2]
 
-[sub_resource type="Shader" id=2]
+[sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
 
 void vertex()
@@ -13,10 +13,10 @@ void vertex()
 	
 }"
 
-[sub_resource type="ShaderMaterial" id=3]
-shader = SubResource( 2 )
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=3]
 font_data = ExtResource( 1 )
 
 [node name="Control" type="Control"]
@@ -29,7 +29,7 @@ __meta__ = {
 }
 
 [node name="Shotgun" type="Control" parent="."]
-material = SubResource( 3 )
+material = SubResource( 2 )
 margin_right = 40.0
 margin_bottom = 40.0
 __meta__ = {
@@ -37,30 +37,30 @@ __meta__ = {
 }
 
 [node name="shotgunammo" type="Label" parent="Shotgun"]
-material = SubResource( 3 )
+material = SubResource( 2 )
 margin_left = 56.288
 margin_top = 1.8
 margin_right = 96.288
 margin_bottom = 16.8
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 text = "/2"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="shotguncounter" type="Label" parent="Shotgun"]
-material = SubResource( 3 )
+material = SubResource( 2 )
 margin_left = 47.5264
 margin_top = 1.8
 margin_right = 87.5264
 margin_bottom = 16.8
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="SMG" type="Control" parent="."]
-material = SubResource( 3 )
+material = SubResource( 2 )
 margin_right = 40.0
 margin_bottom = 40.0
 __meta__ = {
@@ -68,30 +68,30 @@ __meta__ = {
 }
 
 [node name="SMGammo" type="Label" parent="SMG"]
-material = SubResource( 3 )
+material = SubResource( 2 )
 margin_left = 56.288
 margin_top = 1.8
 margin_right = 96.288
 margin_bottom = 16.8
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 text = "/20"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="SMGcounter" type="Label" parent="SMG"]
-material = SubResource( 3 )
+material = SubResource( 2 )
 margin_left = 39.8694
 margin_top = 1.8
 margin_right = 79.8694
 margin_bottom = 16.8
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Pistol" type="Control" parent="."]
-material = SubResource( 3 )
+material = SubResource( 2 )
 margin_right = 40.0
 margin_bottom = 40.0
 __meta__ = {
@@ -99,24 +99,24 @@ __meta__ = {
 }
 
 [node name="pistolammo" type="Label" parent="Pistol"]
-material = SubResource( 3 )
+material = SubResource( 2 )
 margin_left = 56.288
 margin_top = 1.8
 margin_right = 96.288
 margin_bottom = 16.8
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 text = "/6"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="pistolcounter" type="Label" parent="Pistol"]
-material = SubResource( 3 )
+material = SubResource( 2 )
 margin_left = 47.5264
 margin_top = 1.8
 margin_right = 87.5264
 margin_bottom = 16.8
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

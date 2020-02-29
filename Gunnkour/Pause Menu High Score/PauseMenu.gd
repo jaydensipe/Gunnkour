@@ -1,6 +1,5 @@
 extends Control
 
-
 var notPaused = true
 
 func _process(delta):
@@ -18,14 +17,15 @@ func _process(delta):
 			Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 
 func _on_Settings2_pressed():
+	$"/root/PickSound".play()
 	get_tree().paused = false
 	$"/root/GameMusic".stop()
 	$"/root/MusicPlayer".play()
+	$"/root/global".gunnkourCounter = 0
 	get_tree().change_scene("res://Gunnkour/Levels/MainMenu.tscn")
-	pass # Replace with function body.
 
 
 func _on_Settings3_pressed():
+	$"/root/PickSound".play()
 	get_tree().reload_current_scene()
 	get_tree().paused = false
-	pass # Replace with function body.

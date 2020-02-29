@@ -3,7 +3,7 @@ extends Node2D
 var bulletCounter = 20
 
 func _ready():
-	$"/root/global".register_smg(self)
+	$"/root/global".smg = self
 
 func _physics_process(delta):
 	

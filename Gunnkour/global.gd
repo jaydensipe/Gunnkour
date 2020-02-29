@@ -3,7 +3,7 @@ extends Node
 
 var levelCounter = 1
 var equippedWeapon = 1
-
+var gunnkourCounter = 0
 
 # register 
 var player
@@ -13,27 +13,17 @@ var menu
 var pistol
 var shotgun
 var smg
-var color = Color(1, 1, 1, 1)
-
+var killbox
+var blackdeath
+var isDead = 0
+var color = Color(1, 1, 0, 1)
 
 func _ready():
 	$"/root/MusicPlayer".play()
 	
-func register_pistol(in_pistol):
-	pistol = in_pistol
+func _process(delta):
+	if(isDead == 1):
+		$"/root/BlackDeath".get_node("blackdeath").play("Slide")
 	
-func register_smg(in_smg):
-	smg = in_smg
 	
-func register_shotgun(in_shotgun):
-	shotgun = in_shotgun
-
-func register_score(in_timer):
-	score = in_timer
-	
-func register_player(in_player):
-	player = in_player
-	
-func register_camera(in_camera):
-	camera = in_camera
 

@@ -1,12 +1,11 @@
 extends RichTextLabel
 
-
 var ms = 0
 var s = 0
 var m = 0
 
 func _ready():
-	$"/root/global".register_score(self)
+	$"/root/global".score = self
 
 func _process(delta):
 	

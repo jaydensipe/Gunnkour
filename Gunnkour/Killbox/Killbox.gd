@@ -6,12 +6,9 @@ func _on_Area2D_body_entered(body):
 	
 	if(groups.has("Player")):
 		$deathSound.play()
-		$"/root/global".player.hide()
+		$"/root/global".isDead = 1
 		
-	
-
-
+		
 func _on_deathSound_finished():
+	$"/root/global".isDead = 0
 	get_tree().reload_current_scene()
-		
-	pass # Replace with function body.

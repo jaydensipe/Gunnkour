@@ -1,19 +1,21 @@
 extends Control
 
-
+func _ready():
+	if ($"/root/global".gunnkourCounter == 0):
+		$gunnkour.play()
+		$"/root/global".gunnkourCounter += 1
+	pass
+	
 func _on_Play_pressed():
+	$"/root/PickSound".play()
 	get_tree().change_scene("res://Gunnkour/Levels/LevelSelectionScreen.tscn")
-	pass # Replace with function body.
-
 
 func _on_Exit_pressed():
 	get_tree().quit()
-	pass # Replace with function body.
-
 
 func _on_Settings_pressed():
+	$"/root/PickSound".play()
 	get_tree().change_scene("res://Gunnkour/Levels/SettingsMenu.tscn")
-	pass # Replace with function body.
 
 var rng = RandomNumberGenerator.new()
 var my_random_number
@@ -28,4 +30,3 @@ func _on_Label5_pressed():
 	myrn3 = rng.randf_range(0, 1.0)
 	$Label5.add_color_override("font_color", Color(my_random_number, myrn2, myrn3, 1))
 	$Label5.add_color_override("font_color_hover", Color(my_random_number, myrn2, myrn3, 1))
-	pass # Replace with function body.

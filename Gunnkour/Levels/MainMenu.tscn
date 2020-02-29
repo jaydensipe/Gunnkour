@@ -1,8 +1,9 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Gunnkour/Levels/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Gunnkour/Killbox/ThaleahFat.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Gunnkour/Tilemap/mainmenubackground.jpg" type="Texture" id=3]
+[ext_resource path="res://Gunnkour/Characters/Sounds/gunnkour.wav" type="AudioStream" id=4]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -100,9 +101,9 @@ __meta__ = {
 
 [node name="Label5" type="Button" parent="."]
 material = SubResource( 4 )
-margin_left = 1326.42
+margin_left = 1324.15
 margin_top = 952.275
-margin_right = 1442.42
+margin_right = 1440.15
 margin_bottom = 985.27
 rect_scale = Vector2( 5.15626, 5.004 )
 custom_styles/focus = SubResource( 6 )
@@ -111,22 +112,6 @@ text = "made by jayden
 "
 flat = true
 __meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label3" type="Label" parent="."]
-material = SubResource( 4 )
-margin_left = 96.6049
-margin_top = 25.9318
-margin_right = 160.605
-margin_bottom = 58.9318
-rect_scale = Vector2( 26.7518, 25.9618 )
-custom_fonts/font = SubResource( 5 )
-custom_colors/font_color = Color( 0, 0.211765, 0.0666667, 1 )
-text = "Gunnkour
-"
-__meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -164,7 +149,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Play" type="Button" parent="."]
+[node name="q" type="Button" parent="."]
 material = SubResource( 8 )
 margin_left = 121.923
 margin_top = 452.618
@@ -258,8 +243,11 @@ align = 0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="gunnkour" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
 [connection signal="pressed" from="Label5" to="." method="_on_Label5_pressed"]
-[connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="q" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="Settings2" to="." method="_on_Settings_pressed"]
 [connection signal="pressed" from="Settings" to="." method="_on_Settings_pressed"]
 [connection signal="pressed" from="Exit2" to="." method="_on_Exit_pressed"]

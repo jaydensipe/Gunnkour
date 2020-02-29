@@ -21,6 +21,10 @@ run/main_scene="res://Gunnkour/Levels/MainMenu.tscn"
 boot_splash/bg_color=Color( 0.776471, 0.0784314, 0.0784314, 1 )
 config/icon="res://Gunnkour/Characters/Player/Sprites/head.png"
 
+[audio]
+
+default_bus_layout=""
+
 [autoload]
 
 UserData="*res://addons/github-integration/scripts/user_data.gd"
@@ -28,6 +32,8 @@ IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"
 global="*res://Gunnkour/global.gd"
 MusicPlayer="*res://Gunnkour/MusicPlayer.tscn"
 GameMusic="*res://Gunnkour/GameMusic.tscn"
+BlackDeath="*res://Gunnkour/BlackDeath.tscn"
+PickSound="*res://Gunnkour/PickSound.tscn"
 
 [display]
 

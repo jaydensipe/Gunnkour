@@ -9,7 +9,7 @@
 [ext_resource path="res://Gunnkour/Tilemap/Tiles.tres" type="TileSet" id=7]
 [ext_resource path="res://Gunnkour/EndBullet/EndBullet.tscn" type="PackedScene" id=8]
 
-[node name="Level1" type="Node"]
+[node name="Level4" type="Node"]
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 5 )]
 offset = Vector2( 0, -1275 )

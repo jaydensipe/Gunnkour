@@ -5,7 +5,7 @@ var shake = 0
 var shake_magnitude = 1
 	
 func _ready():
-	$"/root/global".register_camera(self)
+	$"/root/global".camera = self
 	
 func _process(delta):
 	
