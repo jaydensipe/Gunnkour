@@ -4,6 +4,7 @@ extends Node
 var levelCounter = 1
 var equippedWeapon = 1
 var gunnkourCounter = 0
+var beatLevel = 0
 
 # register 
 var player

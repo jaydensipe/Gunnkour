@@ -29,7 +29,28 @@ func _on_Timer_timeout():
 		7:
 			$"/root/MusicPlayer".stop()
 			get_tree().change_scene("res://Gunnkour/Levels/Level7.tscn")
-	
+		8:
+			$"/root/MusicPlayer".stop()
+			get_tree().change_scene("res://Gunnkour/Levels/Level8.tscn")
+		9:
+			$"/root/MusicPlayer".stop()
+			get_tree().change_scene("res://Gunnkour/Levels/Level9.tscn")
+		10:
+			$"/root/MusicPlayer".stop()
+			get_tree().change_scene("res://Gunnkour/Levels/Level10.tscn")
+		11:
+			$"/root/MusicPlayer".stop()
+			get_tree().change_scene("res://Gunnkour/Levels/Level11.tscn")
+		12:
+			$"/root/MusicPlayer".stop()
+			get_tree().change_scene("res://Gunnkour/Levels/Level12.tscn")
+		13:
+			$"/root/MusicPlayer".stop()
+			get_tree().change_scene("res://Gunnkour/Levels/Level13.tscn")
+		14:
+			$"/root/MusicPlayer".stop()
+			get_tree().change_scene("res://Gunnkour/Levels/Level14.tscn")
+			
 func _on_Play_pressed():
 	$Timer.start()
 	$"/root/BlackDeath".get_node("blackdeath").play("Slide")
@@ -71,3 +92,52 @@ func _on_Play7_pressed():
 	$"/root/BlackDeath".get_node("blackdeath").play("Slide")
 	$"/root/PickSound".play()
 	$"/root/global".levelCounter = 7
+
+
+func _on_Play14_pressed():
+	$Timer.start()
+	$"/root/BlackDeath".get_node("blackdeath").play("Slide")
+	$"/root/PickSound".play()
+	$"/root/global".levelCounter = 8
+
+
+func _on_Play13_pressed():
+	$Timer.start()
+	$"/root/BlackDeath".get_node("blackdeath").play("Slide")
+	$"/root/PickSound".play()
+	$"/root/global".levelCounter = 9
+
+
+func _on_Play12_pressed():
+	$Timer.start()
+	$"/root/BlackDeath".get_node("blackdeath").play("Slide")
+	$"/root/PickSound".play()
+	$"/root/global".levelCounter = 10
+
+
+func _on_Play11_pressed():
+	$Timer.start()
+	$"/root/BlackDeath".get_node("blackdeath").play("Slide")
+	$"/root/PickSound".play()
+	$"/root/global".levelCounter = 11
+
+
+func _on_Play10_pressed():
+	$Timer.start()
+	$"/root/BlackDeath".get_node("blackdeath").play("Slide")
+	$"/root/PickSound".play()
+	$"/root/global".levelCounter = 12
+
+
+func _on_Play9_pressed():
+	$Timer.start()
+	$"/root/BlackDeath".get_node("blackdeath").play("Slide")
+	$"/root/PickSound".play()
+	$"/root/global".levelCounter = 13
+
+
+func _on_Play8_pressed():
+	$Timer.start()
+	$"/root/BlackDeath".get_node("blackdeath").play("Slide")
+	$"/root/PickSound".play()
+	$"/root/global".levelCounter = 14

@@ -2,6 +2,7 @@ extends Node2D
 
 func _on_Area2D_body_entered(body):
 	var groups = body.get_groups()
+	$"/root/global".beatLevel = 1;
 	$"/root/global".levelCounter = $"/root/global".levelCounter + 1
 	
 	match ($"/root/global".levelCounter):
