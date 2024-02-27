@@ -4,4 +4,4 @@ Gunnkour was the first game I've ever made. It was made using the Godot game eng
 
 Released on: https://jaydensippy.itch.io/gunnkour
 
-![photo](https://jaydensipe.github.io/images/gunnkourpic.webp)
+![photo](https://jaydensipe.com/_app/immutable/assets/gunnkourpic.DMKOUiPv.avif)
